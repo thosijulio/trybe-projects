@@ -14,4 +14,4 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] _[Projeto - Lista de tarefas](1-Introduction/4-todo-list)_
 - [ ] _[(Bônus) Projeto - Meme Generator](1-Introduction/5-meme-generator)_
 - [ ] _[(Bônus) Projeto - Adivinhe a Cor](1-Introduction/6-color-guess)_
-- [ ] _[(Bônus) Projeto - Carta Misteriosa](1-Introduction/(7-mistery-letter)_
+- [ ] _[(Bônus) Projeto - Carta Misteriosa](1-Introduction/7-mistery-letter)_
