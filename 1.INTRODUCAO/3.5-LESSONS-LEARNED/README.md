@@ -5,7 +5,7 @@ Criar um site com uma série de informações a respeito do que você aprendeu n
 
 **Em outras palavras, uma página de `Lessons Learned`**;
 
-## Requisitos do projeto
+## Requisitos do projeto (Obrigatórios)
 
 ### 1 - O corpo da página deve possuir uma cor de fundo específica :heavy_check_mark:
 
