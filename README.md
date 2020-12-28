@@ -8,10 +8,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
-- [ ] _[Bloco 3 - Lessons Learned](1-Introduction/1-lessons-learned)_
-- [ ] _[Bloco 4 - Playground Functions](1-Introduction/2-playground-functions)_
-- [ ] _[Bloco 5 - Arte com Pixels](1-Introduction/3-pixels-art)_
-- [ ] _[Bloco 5 - Lista de tarefas](1-Introduction/4-todo-list)_
-- [ ] _[(Bônus) Bloco 5 - Meme Generator](1-Introduction/5-meme-generator)_
-- [ ] _[(Bônus) Bloco 5 - Adivinhe a Cor](1-Introduction/6-color-guess)_
-- [ ] _[(Bônus) Bloco 5 - Carta Misteriosa](1-Introduction/7-mistery-letter)_
+- [ ] _[Bloco 3 - Lessons Learned](1.INTRODUCAO/3.5-LESSONS-LEARNED)_
+- [ ] _[Bloco 4 - Playground Functions](1.INTRODUCAO/4.5-PLAYGROUND-FUNCTIONS)_
+- [ ] _[Bloco 5 - Arte com Pixels](1.INTRODUCAO/5.5-PIXELS-ART)_
+- [ ] _[Bloco 5 - Lista de tarefas](1.INTRODUCAO/5.6-TODO-LIST)_
+- [ ] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
+- [ ] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
+- [ ] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.8-MISTERY-LETTER)_
