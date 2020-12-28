@@ -1,7 +1,7 @@
 ## Dia 3.5: Projeto - Lessons Learned
 
 ### &nbsp; Descrição do Projeto:
-Criar um site com uma série de informações a respeito do que você aprendeu nos últimos três blocos, estilizado de forma apropriada, utilizando HTML e CSS. O objetivo é consolidar todo o conhecimento adquirido com a produção completa de um site.
+Criar um site com uma série de informações a respeito do que foi aprendido nos últimos três blocos, estilizado de forma apropriada, utilizando HTML e CSS. O objetivo é consolidar todo o conhecimento adquirido com a produção completa de um site.
 
 **Em outras palavras, uma página de `Lessons Learned`**;
 
