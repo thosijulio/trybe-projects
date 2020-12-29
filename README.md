@@ -1,4 +1,15 @@
-# Trybe - Projetos
+<h1 align="center">
+    <img alt="Trybe" src="https://github.com/thosijulio/trybe-exercises/blob/main/trybe_logo.jpeg" />
+</h1>
+
+
+<h1 align="center">Trybe - Projetos</h1> 
+
+<p align=center>
+<a href="https://www.linkedin.com/in/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thosijulio" height="20" width="20" /></a>
+<a href="https://www.github.com/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="thosijulio" height="20" width="20" /></a>
+<a href="https://www.instagram.com/thosijulio" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thosijulio" height="20" width="20" /></a>
+ </p>
 
 Este repositório contém todos os projetos desenvolvidos por _[Julio Henrique Thosi](https://www.linkedin.com/in/thosijulio/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
@@ -15,3 +26,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
 - [ ] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
 - [ ] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.8-MISTERY-LETTER)_
+
+# [...]
