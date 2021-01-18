@@ -20,7 +20,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
 - [x] _[Bloco 3 - Lessons Learned](1.INTRODUCAO/3.5-LESSONS-LEARNED)_
-- [ ] _[Bloco 4 - Playground Functions](1.INTRODUCAO/4.5-PLAYGROUND-FUNCTIONS)_
+- [x] _[Bloco 4 - Playground Functions](1.INTRODUCAO/4.5-PLAYGROUND-FUNCTIONS)_
 - [ ] _[Bloco 5 - Arte com Pixels](1.INTRODUCAO/5.5-PIXELS-ART)_
 - [ ] _[Bloco 5 - Lista de tarefas](1.INTRODUCAO/5.6-TODO-LIST)_
 - [ ] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
