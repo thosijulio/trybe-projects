@@ -3,7 +3,7 @@ body {
 }
 
 #color-palette {
-  margin-top: 70px;
+  margin: 70px auto;
 }
 
 .color {
@@ -31,7 +31,9 @@ body {
 }
 
 #clear-board {
-  margin: 40px;
+  margin: 40px auto 10px;
+  display: block;
+
 }
 
 #pixel-board {

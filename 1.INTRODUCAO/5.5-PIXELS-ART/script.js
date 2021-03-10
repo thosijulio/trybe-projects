@@ -1,11 +1,16 @@
-function createPixelBoard() {
+function createPixelBoard(pixelBoardSize) {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 0; index < 5; index += 1) {
+
+  while (pixelBoard.lastElementChild) {
+    pixelBoard.removeChild(pixelBoard.lastElementChild);
+  }
+
+  for (let index = 0; index < pixelBoardSize; index += 1) {
     const pixelLine = document.createElement('div');
     pixelLine.className = 'pixel-line';
     pixelBoard.appendChild(pixelLine);
 
-    for (let index2 = 0; index2 < 5; index2 += 1) {
+    for (let index2 = 0; index2 < pixelBoardSize; index2 += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixelLine.appendChild(pixel);
@@ -46,7 +51,29 @@ function clearPixelBoard() {
   })
 }
 
+function changeBoardSize() {
+  let buttonInput = document.getElementById('generate-board');
+  buttonInput.addEventListener('click', function() {
+  let inputValue = document.getElementById('board-size').value;
+
+  if (inputValue <= 5 && inputValue > 0) {
+    createPixelBoard(5);
+  }
+  else if (inputValue >= 50) {
+    createPixelBoard(50);
+  }
+  else if (inputValue > 5 && inputValue < 50){
+    createPixelBoard(inputValue);
+  }
+  else {
+    alert('Opção inválida!');
+  }
+  })
+}
+
+
 clearPixelBoard();
-createPixelBoard();
+createPixelBoard(5);
 selectColor();
 paintPixelBoard();
+changeBoardSize();
