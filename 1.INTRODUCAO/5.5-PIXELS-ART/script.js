@@ -15,19 +15,20 @@ function createPixelBoard() {
 
 function selectColor() {
   const colorPalette = document.getElementById('color-palette');
-  colorPalette.addEventListener('click', function (event) {
+  colorPalette.addEventListener('click', function evento(event) {
     if (event.target.className.includes('color')) {
       const palette = document.getElementsByClassName('color');
-    for (let index = 0; index < palette.length; index += 1) {
-      palette[index].className = 'color';
+      for (let index = 0; index < palette.length; index += 1) {
+        palette[index].className = 'color';
+      }
+      event.target.className += ' selected';
     }
-    event.target.className += ' selected';
-  }})
+  })
 }
 
 function paintPixelBoard() {
   let pixelBoard = document.getElementById('pixel-board');
-  pixelBoard.addEventListener('click', function(event) {
+  pixelBoard.addEventListener('click', function evento(event) {
     if (event.target.className = 'pixel') {
       let selectedColor = document.querySelector('.selected');
       event.target.style.backgroundColor = selectedColor.style.backgroundColor;
@@ -35,6 +36,17 @@ function paintPixelBoard() {
   })
 }
 
+function clearPixelBoard() {
+  let buttonClearBoard = document.getElementById('clear-board');
+  buttonClearBoard.addEventListener('click', function clear() {
+    let board = document.getElementsByClassName('pixel');
+    for(let index = 0; index < board.length; index += 1) {
+      board[index].style.backgroundColor = '';
+    }
+  })
+}
+
+clearPixelBoard();
 createPixelBoard();
 selectColor();
 paintPixelBoard();
