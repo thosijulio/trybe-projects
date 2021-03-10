@@ -20,7 +20,7 @@ function createPixelBoard(pixelBoardSize) {
 
 function selectColor() {
   const colorPalette = document.getElementById('color-palette');
-  colorPalette.addEventListener('click', function evento(event) {
+  colorPalette.addEventListener('click', function(event) {
     if (event.target.className.includes('color')) {
       const palette = document.getElementsByClassName('color');
       for (let index = 0; index < palette.length; index += 1) {
@@ -33,7 +33,7 @@ function selectColor() {
 
 function paintPixelBoard() {
   let pixelBoard = document.getElementById('pixel-board');
-  pixelBoard.addEventListener('click', function evento(event) {
+  pixelBoard.addEventListener('click', function(event) {
     if (event.target.className === 'pixel') {
       let selectedColor = document.querySelector('.selected');
       event.target.style.backgroundColor = selectedColor.style.backgroundColor;
