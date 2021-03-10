@@ -66,7 +66,7 @@ function changeBoardSize() {
     createPixelBoard(inputValue);
   }
   else {
-    alert('Opção inválida!');
+    alert('Board inválido!');
   }
   })
 }
