@@ -34,9 +34,9 @@ function selectColor() {
 function paintPixelBoard() {
   let pixelBoard = document.getElementById('pixel-board');
   pixelBoard.addEventListener('click', function evento(event) {
-    if (event.target.className = 'pixel') {
-      let selectedColor = getComputedStyle(document.querySelector('.selected'));
-      event.target.style.backgroundColor = selectedColor.backgroundColor;
+    if (event.target.className === 'pixel') {
+      let selectedColor = document.querySelector('.selected');
+      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
     }
   })
 }
@@ -71,9 +71,21 @@ function changeBoardSize() {
   })
 }
 
+function generateRandomColors() {
+  let colorPalette = document.getElementsByClassName('color');
+  for (let index = 0; index < colorPalette.length; index += 1) {
+    if (colorPalette[index].id === 'color1') {
+      colorPalette[index].style.backgroundColor = 'black';
+    }
+    else {
+      colorPalette[index].style.backgroundColor = 'RGB(' + (Math.floor(Math.random() * 255) + 1) + ', ' + (Math.floor(Math.random() * 255) + 1) + ', ' + (Math.floor(Math.random() * 255) + 1) + ')';
+    }
+  }
+}
 
 clearPixelBoard();
 createPixelBoard(5);
 selectColor();
 paintPixelBoard();
 changeBoardSize();
+generateRandomColors();

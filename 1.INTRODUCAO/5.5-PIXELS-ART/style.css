@@ -13,23 +13,6 @@ body {
   border: 1px solid black;
 }
 
-#color1 {
-  background-color: black;
-}
-
-#color2 {
-  background-color: brown
-  ;
-}
-
-#color3 {
-  background-color: red;
-}
-
-#color4 {
-  background-color: lightcoral;
-}
-
 #clear-board {
   margin: 40px auto 10px;
   display: block;
