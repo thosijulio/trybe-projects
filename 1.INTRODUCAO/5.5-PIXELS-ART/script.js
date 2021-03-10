@@ -1,100 +1,91 @@
-window.onload = function () {
-  let corPreta = document.getElementById('color1');
-  corPreta.className += ' selected';
+function createPixelBoard(pixelBoardSize) {
+  const pixelBoard = document.getElementById('pixel-board');
+
+  while (pixelBoard.lastElementChild) {
+    pixelBoard.removeChild(pixelBoard.lastElementChild);
+  }
+
+  for (let index = 0; index < pixelBoardSize; index += 1) {
+    const pixelLine = document.createElement('div');
+    pixelLine.className = 'pixel-line';
+    pixelBoard.appendChild(pixelLine);
+
+    for (let index2 = 0; index2 < pixelBoardSize; index2 += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelLine.appendChild(pixel);
+    }
+  }
 }
 
-function setBoardSize () {
-  let botaoVqv = document.querySelector('#generate-board');
-  let input = document.querySelector('input');
-  let pixelBoard = document.querySelector('#pixel-board');
-  botaoVqv.addEventListener ('click', function () {
-    let boardSize = input.value;
-    if (boardSize) {
-      pixelBoard.innerText = '';
-      if (boardSize < 5) {
-        boardSize = 5;
+function selectColor() {
+  const colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', function(event) {
+    if (event.target.className.includes('color')) {
+      const palette = document.getElementsByClassName('color');
+      for (let index = 0; index < palette.length; index += 1) {
+        palette[index].className = 'color';
       }
-      if (boardSize > 50) {
-        boardSize = 50;
-      }
-    function criarQuadro (boardSize) {
-      for (index = 0 ; index < boardSize ; index += 1) {
-        let linha = document.createElement('tr');
-        let pixelBoard = document.getElementById('pixel-board');
-        pixelBoard.appendChild(linha);
-        for (index2 = 0; index2 < boardSize; index2 += 1) {
-          let coluna = document.createElement('td');
-          coluna.className = 'pixel';
-          document.getElementById('pixel-board').appendChild(coluna);
-        }
-      }
+      event.target.className += ' selected';
     }
-    criarQuadro(boardSize);
+  })
+}
+
+function paintPixelBoard() {
+  let pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', function(event) {
+    if (event.target.className === 'pixel') {
+      let selectedColor = document.querySelector('.selected');
+      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+    }
+  })
+}
+
+function clearPixelBoard() {
+  let buttonClearBoard = document.getElementById('clear-board');
+  buttonClearBoard.addEventListener('click', function clear() {
+    let board = document.getElementsByClassName('pixel');
+    for(let index = 0; index < board.length; index += 1) {
+      board[index].style.backgroundColor = '';
+    }
+  })
+}
+
+function changeBoardSize() {
+  let buttonInput = document.getElementById('generate-board');
+  buttonInput.addEventListener('click', function() {
+  let inputValue = document.getElementById('board-size').value;
+
+  if (inputValue <= 5 && inputValue > 0) {
+    createPixelBoard(5);
+  }
+  else if (inputValue >= 50) {
+    createPixelBoard(50);
+  }
+  else if (inputValue > 5 && inputValue < 50){
+    createPixelBoard(inputValue);
+  }
+  else {
+    alert('Board inválido!');
+  }
+  })
+}
+
+function generateRandomColors() {
+  let colorPalette = document.getElementsByClassName('color');
+  for (let index = 0; index < colorPalette.length; index += 1) {
+    if (colorPalette[index].id === 'color1') {
+      colorPalette[index].style.backgroundColor = 'black';
     }
     else {
-      alert('Board inválido!');
-    }
-  })
-}
-
-function selectedColorChoise () {
-  let paletaDeCores = document.getElementById('color-palette');
-  paletaDeCores.addEventListener ('click', function (event) {
-    let divsCores = document.getElementsByClassName('color');
-    for (index = 0; index < divsCores.length; index += 1) {
-      divsCores[index].classList.remove('selected');
-    }
-    event.target.classList.add('selected');
-  })
-}
-
-function paintPixel () {
-  let quadroPixels = document.querySelector('#pixel-board');
-  quadroPixels.addEventListener('click', function (event) {
-      let corSelecionada = document.querySelector('.selected');
-      let styleCorSelecionada = window.getComputedStyle(corSelecionada).getPropertyValue('background-color');
-      event.target.style.backgroundColor = styleCorSelecionada;
-  })
-}
-
-function limpaQuadro () {
-  let botaoLimpa = document.querySelector('#clear-board');
-  botaoLimpa.addEventListener('click', function () {
-    pixels = document.getElementsByClassName ('pixel');
-    for (index = 0; index < pixels.length; index += 1) {
-      pixels[index].style.backgroundColor = '';
-    }
-  })
-}
-
-function criarQuadro () {
-  for (index = 0 ; index < 5 ; index += 1) {
-    let linha = document.createElement('tr');
-    let pixelBoard = document.getElementById('pixel-board');
-    pixelBoard.appendChild(linha);
-    for (index2 = 0; index2 < 5; index2 += 1) {
-      let coluna = document.createElement('td');
-      coluna.className = 'pixel';
-      document.getElementById('pixel-board').appendChild(coluna);
+      colorPalette[index].style.backgroundColor = 'RGB(' + (Math.floor(Math.random() * 255) + 1) + ', ' + (Math.floor(Math.random() * 255) + 1) + ', ' + (Math.floor(Math.random() * 255) + 1) + ')';
     }
   }
 }
 
-function gerarCorAleatoria () {
-  let paletaCores = document.getElementsByClassName ('color');
-  for (index = 0; index < paletaCores.length; index += 1) {
-    if (paletaCores[index].id !== 'color1') {
-      let cor1 = Math.floor(Math.random() * 256);
-      let cor2 = Math.floor(Math.random() * 256);
-      let cor3 = Math.floor(Math.random() * 256);
-      paletaCores[index].style.backgroundColor = 'rgb(' + cor1 + ', ' + cor2 + ', ' + cor3 + ')';
-    }
-  }
-}
-
-selectedColorChoise();
-paintPixel();
-limpaQuadro();
-setBoardSize();
-criarQuadro();
-gerarCorAleatoria();
+clearPixelBoard();
+createPixelBoard(5);
+selectColor();
+paintPixelBoard();
+changeBoardSize();
+generateRandomColors();
