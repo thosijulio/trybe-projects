@@ -14,15 +14,27 @@ function createPixelBoard() {
 }
 
 function selectColor() {
-  let colorPalette = document.getElementById('color-palette');
-  colorPalette.addEventListener('click', function(event) {
-    let palette = document.getElementsByClassName('color');
-    for (index = 0; index < palette.length; index += 1) {
+  const colorPalette = document.getElementById('color-palette');
+  colorPalette.addEventListener('click', function (event) {
+    if (event.target.className.includes('color')) {
+      const palette = document.getElementsByClassName('color');
+    for (let index = 0; index < palette.length; index += 1) {
       palette[index].className = 'color';
     }
     event.target.className += ' selected';
+  }})
+}
+
+function paintPixelBoard() {
+  let pixelBoard = document.getElementById('pixel-board');
+  pixelBoard.addEventListener('click', function(event) {
+    if (event.target.className = 'pixel') {
+      let selectedColor = document.querySelector('.selected');
+      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+    }
   })
 }
 
 createPixelBoard();
 selectColor();
+paintPixelBoard();
