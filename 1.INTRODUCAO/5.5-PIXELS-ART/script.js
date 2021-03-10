@@ -30,8 +30,8 @@ function paintPixelBoard() {
   let pixelBoard = document.getElementById('pixel-board');
   pixelBoard.addEventListener('click', function evento(event) {
     if (event.target.className = 'pixel') {
-      let selectedColor = document.querySelector('.selected');
-      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+      let selectedColor = getComputedStyle(document.querySelector('.selected'));
+      event.target.style.backgroundColor = selectedColor.backgroundColor;
     }
   })
 }
