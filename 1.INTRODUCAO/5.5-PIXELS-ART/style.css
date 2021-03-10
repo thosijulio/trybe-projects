@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+}
+
+#color-palette {
+  margin-top: 70px;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#color1 {
+  background-color: black;
+}
+
+#color2 {
+  background-color: brown;
+}
+
+#color3 {
+  background-color: red;
+}
+
+#color4 {
+  background-color: lightcoral;
+}
