@@ -27,7 +27,9 @@ function answer () {
       }
       else {
         answerText.innerText = 'Errou! Tente novamente!';
-        score.innerText = parseInt(score.innerText) - 1;
+        if(score.innerText != '0') {
+          score.innerText = parseInt(score.innerText) - 1;
+        }
       }
     }
   })
