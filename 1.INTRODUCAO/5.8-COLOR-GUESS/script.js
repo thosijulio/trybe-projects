@@ -24,7 +24,7 @@ function answer () {
         answerText.innerText = 'Acertou!';
       }
       else {
-        answerText.innerText = 'Errou! Tente Novamente!';
+        answerText.innerText = 'Errou! Tente novamente!';
       }
     }
   })
