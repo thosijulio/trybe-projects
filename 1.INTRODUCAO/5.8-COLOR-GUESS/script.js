@@ -18,13 +18,16 @@ function colorGeneratorAndToGuess() {
 function answer () {
   let answerText = document.getElementById('answer');
   let circulos = document.getElementById('colored-balls');
+  let score = document.getElementById('score');
   circulos.addEventListener('click', function(event) {
     if(event.target.className === 'ball') {
       if(event.target.id === 'correct-color') {
         answerText.innerText = 'Acertou!';
+        score.innerText = parseInt(score.innerText) + 3;
       }
       else {
         answerText.innerText = 'Errou! Tente novamente!';
+        score.innerText = parseInt(score.innerText) - 1;
       }
     }
   })
