@@ -30,4 +30,14 @@ function answer () {
   })
 }
 
+function resetColors() {
+  let resetButton = document.getElementById('reset-game');
+  let answerText = document.getElementById('answer')
+  resetButton.addEventListener('click', function() {
+    colorGeneratorAndToGuess();
+    answerText.innerText = 'Escolha uma cor';
+  })
+}
+
 answer();
+resetColors();

@@ -1,11 +1,15 @@
 body {
-    font-family: 'Open sans', sans-serif;
-    text-align: center;
+  font-family: 'Open sans', sans-serif;
+  text-align: center;
 }
 .ball {
-    border-radius: 100%;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border: 2px solid black;
+  border: 2px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.ball:active {
+  border: 2px solid blue;
 }
