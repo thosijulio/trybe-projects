@@ -4,7 +4,7 @@ function createLetter() {
     const cartaGerada = document.getElementById('carta-gerada');
     if((document.getElementById('carta-texto').value).trim().length === 0) {
       cartaGerada.innerText = '';
-      cartaGerada.innerText = 'Por favor, digite o conteúdo da carta';
+      cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
     }
     else {
       for(let index = 0; index < cartaGerada.childElementCount; index += 1) {
@@ -28,7 +28,7 @@ function defineClass () {
   let grupoInclinacao = ['skewleft', 'skewright'];
   let palavras = document.getElementsByTagName('span');
   for(index = 0; index < palavras.length; index += 1) {
-    palavras[index].className = (grupoEstilo[(Math.floor(Math.random()*3)+1)]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)]);
+    palavras[index].className = (grupoEstilo[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)-1]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)-1]);
   }
 }
 
