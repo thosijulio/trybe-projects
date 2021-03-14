@@ -21,7 +21,7 @@ function createLetter() {
   })
 }
 
-function defineClass () {
+function defineClass() {
   let grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
   let grupoTamanho = ['medium', 'big', 'reallybig'];
   let grupoRotacao = ['rotateleft', 'rotateright'];
@@ -32,5 +32,19 @@ function defineClass () {
   }
 }
 
-createLetter();
+function changeClassOnClick() {
+  let palavras = document.getElementById('carta-gerada');
+  let grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+  let grupoTamanho = ['medium', 'big', 'reallybig'];
+  let grupoRotacao = ['rotateleft', 'rotateright'];
+  let grupoInclinacao = ['skewleft', 'skewright'];
+  palavras.addEventListener('click', function(event) {
+    if(event.target.parentNode === palavras) {
+      event.target.className = '';
+      event.target.className = (grupoEstilo[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)-1]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)-1]);
+    }
+  })
+}
 
+createLetter();
+changeClassOnClick();
