@@ -59,3 +59,7 @@ span {
 .skewright {
   transform: skewX(-10deg);
 }
+
+#carta-contador {
+  display: inline-block;
+}
