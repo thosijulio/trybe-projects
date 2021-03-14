@@ -17,6 +17,7 @@ function createLetter() {
         cartaGerada.appendChild(spanPalavra);
       }
       defineClass();
+      sumWords();
     }
   })
 }
@@ -28,7 +29,9 @@ function defineClass() {
   let grupoInclinacao = ['skewleft', 'skewright'];
   let palavras = document.getElementsByTagName('span');
   for(index = 0; index < palavras.length; index += 1) {
-    palavras[index].className = (grupoEstilo[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)-1]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)-1]);
+    if(palavras[index].parentNode === document.getElementById('carta-gerada')) {
+      palavras[index].className = (grupoEstilo[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)-1]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)-1]);
+    }
   }
 }
 
@@ -44,6 +47,11 @@ function changeClassOnClick() {
       event.target.className = (grupoEstilo[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)-1]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)-1]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)-1]);
     }
   })
+}
+
+function sumWords() {
+  let contador = document.getElementById('contador');
+  contador.innerText = (document.getElementsByTagName('span').length - 1);
 }
 
 createLetter();
