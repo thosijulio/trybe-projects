@@ -16,8 +16,21 @@ function createLetter() {
         spanPalavra.innerText = mensagemDigitada[index];
         cartaGerada.appendChild(spanPalavra);
       }
+      defineClass();
     }
   })
 }
 
+function defineClass () {
+  let grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+  let grupoTamanho = ['medium', 'big', 'reallybig'];
+  let grupoRotacao = ['rotateleft', 'rotateright'];
+  let grupoInclinacao = ['skewleft', 'skewright'];
+  let palavras = document.getElementsByTagName('span');
+  for(index = 0; index < palavras.length; index += 1) {
+    palavras[index].className = (grupoEstilo[(Math.floor(Math.random()*3)+1)]) + ' ' + (grupoTamanho[(Math.floor(Math.random()*3)+1)]) + ' ' + (grupoRotacao[(Math.floor(Math.random()*2)+1)]) + ' ' + (grupoInclinacao[(Math.floor(Math.random()*2)+1)]);
+  }
+}
+
 createLetter();
+
