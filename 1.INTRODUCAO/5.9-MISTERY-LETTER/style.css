@@ -24,9 +24,17 @@ span {
 
 .magazine2 {
   background-image: url('images/pink-pattern.png');
+  color: rgb(255, 0, 255);
+  font-family: Verdana;
+  font-weight: 900;
 }
 
 .medium {
   font-size: 20px;
   padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
 }
