@@ -24,7 +24,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[Bloco 5 - Arte com Pixels](1.INTRODUCAO/5.5-PIXELS-ART)_
 - [X] _[Bloco 5 - Lista de tarefas](1.INTRODUCAO/5.6-TODO-LIST)_
 - [ ] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
-- [ ] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
+- [X] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
 - [ ] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.8-MISTERY-LETTER)_
 
 # [...]
