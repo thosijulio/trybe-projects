@@ -50,7 +50,7 @@ function changeClassOnClick() {
 }
 
 function sumWords() {
-  let contador = document.getElementById('contador');
+  let contador = document.getElementById('carta-contador');
   contador.innerText = (document.getElementsByTagName('span').length - 1);
 }
 
