@@ -77,7 +77,7 @@ Segue um exemplo de como o projeto se parece depois de pronto:
 
 - `transform` com o valor `skewX(-10deg)`;
 
-### 16 - As classes devem ser adicionadas de forma aleatória a fim de estilizar as palavras. :heavy-check-mark:
+### 16 - As classes devem ser adicionadas de forma aleatória a fim de estilizar as palavras. :heavy_check_mark:
 
 - As classes devem ser adicionadas às tags `span` de forma **aleatória**.
 - Adicione pelo menos mais de uma classe em uma palavra.
