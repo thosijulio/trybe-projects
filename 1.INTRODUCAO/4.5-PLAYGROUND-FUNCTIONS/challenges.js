@@ -92,21 +92,21 @@ function fizzBuzz(numerosRecebidos) {
 }
 
 // Desafio 9
-function encode(stringRecebida) {
-  stringTransformada = stringRecebida.replace(/a/g, '1');
-  stringTransformada = stringTransformada.replace(/e/g, '2');
-  stringTransformada = stringTransformada.replace(/i/g, '3');
-  stringTransformada = stringTransformada.replace(/o/g, '4');
-  stringTransformada = stringTransformada.replace(/u/g, '5');
+function encode(stringTransformada) {
+  stringTransformada = stringTransformada.replace(/a/gi, '1');
+  stringTransformada = stringTransformada.replace(/e/gi, '2');
+  stringTransformada = stringTransformada.replace(/i/gi, '3');
+  stringTransformada = stringTransformada.replace(/o/gi, '4');
+  stringTransformada = stringTransformada.replace(/u/gi, '5');
   return stringTransformada;
 }
 
-function decode(stringRecebida) {
-  stringTransformada = stringRecebida.replace(/1/g, 'a');
-  stringTransformada = stringTransformada.replace(/2/g, 'e');
-  stringTransformada = stringTransformada.replace(/3/g, 'i');
-  stringTransformada = stringTransformada.replace(/4/g, 'o');
-  stringTransformada = stringTransformada.replace(/5/g, 'u');
+function decode(stringTransformada) {
+  stringTransformada = stringTransformada.replace(/1/gi, 'a');
+  stringTransformada = stringTransformada.replace(/2/gi, 'e');
+  stringTransformada = stringTransformada.replace(/3/gi, 'i');
+  stringTransformada = stringTransformada.replace(/4/gi, 'o');
+  stringTransformada = stringTransformada.replace(/5/gi, 'u');
   return stringTransformada;
 }
 
