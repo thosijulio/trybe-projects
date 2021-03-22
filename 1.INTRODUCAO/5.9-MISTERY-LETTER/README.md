@@ -95,7 +95,7 @@ Segue um exemplo de como o projeto se parece depois de pronto:
 - Ao clicar em uma palavra, um novo estilo **aleatório** deve ser aplicado.
 - O número de mudanças deve ser ilimitado;
 
-### 18 - Criar um parágrafo com o id=\"carta-contador\" onde existirá um contador de palavras.
+### 18 - Criar um parágrafo com o id=\"carta-contador\" onde existirá um contador de palavras. ✔️
 
 - Esse contador deve informar a quantidade de palavras presentes na carta misteriosa gerada.
 - Ao criar uma carta o elemento `p` com o `id="carta-contador",  é atualizado com o número de palavras da carta (valor numérico).
