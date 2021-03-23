@@ -155,7 +155,7 @@ Segue um exemplo de como o projeto pode se parecer depois de pronto:
   * Caso a opção selecionada no campo Gênero seja Masculino exibir "Masculino"
   * Caso a opção selecionada no campo Gênero seja Personalizado exibir "Personalizado":
 
-### Requisito Bônus
+## Requisito Bônus
 
 **Desenvolvimento da versão mobile do Facebook.**
 
