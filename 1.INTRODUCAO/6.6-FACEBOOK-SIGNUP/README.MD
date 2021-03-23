@@ -5,7 +5,7 @@ Desenvolver a p√°gina inicial do Facebook, tentando deixar o mais parecido poss√
 Segue um exemplo de como o projeto pode se parecer depois de pronto:
 
 <p align="center">
-  <img alt="exemplo de Facebook Signup" src="./facebook-signup-example.png">
+  <img alt="exemplo de Facebook Signup" src="./facebook.png">
 </p>
 
 ### &nbsp; Habilidades:
