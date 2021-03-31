@@ -80,7 +80,7 @@
 // você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
 const createMenu = (menu) => {
-  const menuRestaurant = {consumption: [],};
+  const menuRestaurant = { consumption: [], };
 
   menuRestaurant.fetchMenu = () => menu;
   menuRestaurant.fetchMenu();
@@ -91,11 +91,11 @@ const createMenu = (menu) => {
       if (element in menu.food) {
         price += menu.food[element];
       } else if (element in menu.drink) {
-          price += menu.drink[element];
+        price += menu.drink[element];
       }
     });
     return parseFloat(((price) * 1.10).toPrecision(4));
-    };
+  };
   return menuRestaurant;
 };
 
