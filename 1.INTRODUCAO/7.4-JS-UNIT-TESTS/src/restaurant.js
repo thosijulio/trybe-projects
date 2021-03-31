@@ -81,6 +81,7 @@
 
 const createMenu = (menu) => {
   const menuRestaurant = { fetchMenu: () => menu,
+    consumption: [],
     order: (string) => menuRestaurant.consumption.push(string),
   };
 
