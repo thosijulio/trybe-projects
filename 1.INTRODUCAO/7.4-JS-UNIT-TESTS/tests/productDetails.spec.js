@@ -42,7 +42,8 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(productDetails()[0], productDetails[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    const end123 = (productDetails()[0].details.productId.endsWith('123')) && (productDetails()[1].details.productId.endsWith('123'));
-    assert.strictEqual(end123, true);
+    const object1final = (productDetails()[0].details.productId.endsWith('123'));
+    const object2final = (productDetails()[1].details.productId.endsWith('123'));
+    assert.strictEqual(object1final && object2final, true);
   });
 });
