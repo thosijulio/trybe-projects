@@ -94,7 +94,7 @@ const createMenu = (menu) => {
       }
     });
     return parseFloat(((price) * 1.10).toPrecision(4));
-  }
+  };
 
   menuRestaurant.fetchMenu();
   menuRestaurant.pay();
