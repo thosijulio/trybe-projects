@@ -87,17 +87,17 @@ const createMenu = (menu) => {
   menuRestaurant.consumption = [];
   menuRestaurant.order = (string) => menuRestaurant.consumption.push(string);
   menuRestaurant.pay = () => {
-  let price = 0;
-  menuRestaurant.consumption.forEach((element) => {
-    if (element in menu.food) {
-      price += menu.food[element];
-    }
-    else if (element in menu.drink) {
-      price += menu.drink[element];
-    }
-    });
-    return parseFloat(((price)*1.10).toPrecision(4));
-  }
+    let price = 0;
+    menuRestaurant.consumption.forEach((element) => {
+      if (element in menu.food) {
+        price += menu.food[element];
+      }
+      else if (element in menu.drink) {
+        price += menu.drink[element];
+      }
+      });
+      return parseFloat(((price) * 1.10).toPrecision(4));
+    };
   return menuRestaurant;
 };
 

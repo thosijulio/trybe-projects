@@ -53,9 +53,9 @@ const createMenu = require('../src/restaurant');
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
     const choisenMenu = {
-      food: {'pepperoni': 39.90, 'frango catupiry': 43.5},
-      drink: {'coca': 7.50, 'agua': 4},
-    }
+      food: { pepperoni: 39.90, frango: 43.5 },
+      drink: { coca: 7.50, agua: 4 },
+    };
     const menuRetornado = createMenu(choisenMenu);
     // TESTE 1
     assert.strictEqual(typeof ((createMenu(choisenMenu).fetchMenu)), 'function');
@@ -71,15 +71,15 @@ describe('#createMenu', () => {
     // TESTE 6
     menuRetornado.order('agua');
     menuRetornado.order('pepperoni');
-    menuRetornado.order('frango catupiry');
-    assert.deepStrictEqual(menuRetornado.consumption, ['coca', 'agua', 'pepperoni', 'frango catupiry']);
+    menuRetornado.order('frango');
+    assert.deepStrictEqual(menuRetornado.consumption, ['coca', 'agua', 'pepperoni', 'frango']);
     // TESTE 7
     menuRetornado.consumption = [];
     menuRetornado.order('coca');
     menuRetornado.order('agua');
     menuRetornado.order('coca');
     assert.deepStrictEqual(menuRetornado.consumption, ['coca', 'agua', 'coca']);
-    //TESTE 8
+    // TESTE 8
     menuRetornado.pay();
     assert.strictEqual(menuRetornado.pay(), 20.90);
   });
