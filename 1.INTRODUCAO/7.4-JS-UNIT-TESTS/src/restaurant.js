@@ -83,7 +83,7 @@ const createMenu = (menu) => {
   const menuRestaurant = { fetchMenu: () => menu,
     order: (string) => menuRestaurant.consumption.push(string),
   };
-  
+
   menuRestaurant.pay = () => {
     let price = 0;
     menuRestaurant.consumption.forEach((element) => {
@@ -94,9 +94,10 @@ const createMenu = (menu) => {
       }
     });
     return parseFloat(((price) * 1.10).toPrecision(4));
-  },
+  }
 
   menuRestaurant.fetchMenu();
+  menuRestaurant.pay();
   return menuRestaurant;
 };
 
