@@ -20,7 +20,7 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(stringRecebida) {
-  let nomeConcatenado = stringRecebida[(stringRecebida.length) - 1] + ', ' + stringRecebida[0];
+  let nomeConcatenado = `${stringRecebida[stringRecebida.length - 1]}, ${stringRecebida[0]}`;
   return nomeConcatenado;
 }
 
@@ -59,16 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1s < cat2s) {
     phrase = 'cat1';
     return phrase;
-  }
-
-  else if (cat1s > cat2s) {
+  } else if (cat1s > cat2s) {
     phrase = 'cat2';
     return phrase;
   }
-
-  else {
-    return distIgual;
-  }
+  return distIgual;
 }
 
 // Desafio 8
@@ -77,14 +72,11 @@ function fizzBuzz(numerosRecebidos) {
   for (let index = 0; index < numerosRecebidos.length; index += 1) {
     if ((numerosRecebidos[index] % 3) === 0 && (numerosRecebidos[index] % 5) === 0) {
       arrayResultado.push('fizzBuzz');
-    }
-    else if ((numerosRecebidos[index] % 3) === 0) {
-      arrayResultado.push('fizz')
-    }
-    else if ((numerosRecebidos[index] % 5) === 0) {
-      arrayResultado.push('buzz')
-    }
-    else {
+    } else if ((numerosRecebidos[index] % 3) === 0) {
+      arrayResultado.push('fizz');
+    } else if ((numerosRecebidos[index] % 5) === 0) {
+      arrayResultado.push('buzz');
+    } else {
       arrayResultado.push('bug!');
     }
   }
@@ -111,14 +103,14 @@ function decode(stringTransformada) {
 }
 
 module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
+calcArea,
+catAndMouse,
+compareTrue,
+concatName,
+decode,
+encode,
+fizzBuzz,
+footballPoints,
+highestCount,
+splitSentence,
 };
