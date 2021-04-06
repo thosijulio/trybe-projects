@@ -76,10 +76,12 @@ const birthDate = document.getElementById('birthdate');
 function exercicio20() {
   buttonRegister.addEventListener('click', (evt) => {
     const gender = document.querySelector('input[type=radio]:checked');
-    const frase20 = `Olá, ${firstName.value} ${lastName.value}, 
-    email/telefone: ${emailPhone.value}, 
-    data nascimento: ${birthDate.value} 
-    genero: ${gender.value}`;
+    if (gender) {
+      const frase20 = `Olá, ${firstName.value} ${lastName.value}, 
+      email/telefone: ${emailPhone.value}, 
+      data nascimento: ${birthDate.value} 
+      genero: ${gender.value}`;
+    }
     const novaTagP = document.createElement('p');
     novaTagP.innerText = frase20;
     console.log(frase20);
