@@ -67,16 +67,20 @@ function checkGenderChoised() {
   });
 }
 
+const firstName = document.getElementById('firstname');
+const lastName = document.getElementById('lastname');
+const emailPhone = document.getElementById('phone_email');
+const birthDate = document.getElementById('birthdate');
+
 function exercicio20() {
   const form = document.getElementsByClassName('right-content');
   buttonRegister.addEventListener('click', (evt) => {
-    const firstName = document.getElementById('firstname');
-    const lastName = document.getElementById('lastname');
-    const emailPhone = document.getElementById('phone_email');
-    const birthDate = document.getElementById('birthdate');
     const gender = document.querySelector('#facebook-form input[type=radio]:checked');
-    const frase20 = `Olá, ${firstName.value} ${lastName.value}, email/telefone: ${emailPhone.value}, data nascimento: ${birthDate.value} genero: ${gender.value}`;
-    const novaTagP = document.createElement('p')
+    const frase20 = `Olá, ${firstName.value} ${lastName.value}, 
+    email/telefone: ${emailPhone.value}, 
+    data nascimento: ${birthDate.value} 
+    genero: ${gender.value}`;
+    const novaTagP = document.createElement('p');
     novaTagP.innerText = frase20;
     console.log(frase20);
     const invalidForm = document.querySelector('#facebook-form p');
