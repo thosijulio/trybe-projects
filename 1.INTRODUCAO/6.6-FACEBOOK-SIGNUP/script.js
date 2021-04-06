@@ -42,14 +42,13 @@ function createCustomGender() {
   form.insertBefore(input, buttonRegister);
 }
 
-function cCheckGenderChoised (radioChoised) {
+function cCheckGenderChoised(radioChoised) {
   const checkGenderText = document.getElementById('customGender');
   const form = document.getElementById('facebook-form');
-  
+
   if (radioChoised.id === 'Personalizado' && checkGenderText === null) {
     createCustomGender();
-  }
-  else if (radioChoised.id !== 'Personalizado' && checkGenderText) {
+  }  else if (radioChoised.id !== 'Personalizado' && checkGenderText) {
     form.removeChild(checkGenderText);
   }
 }
