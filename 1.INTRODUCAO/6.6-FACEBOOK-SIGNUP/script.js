@@ -11,6 +11,7 @@ function buttonLoginAlert() {
 function checkInfos() {
   const invalidMessage = document.createElement('p');
   invalidMessage.innerText = 'Campos inválidos';
+  invalidMessage.id = 'invalid-form';
   buttonRegister.addEventListener('click', (evt) => {
     const inputs = document.querySelectorAll('#facebook-form input');
     for (let index = 0; index < 4; index += 1) {
@@ -66,7 +67,31 @@ function checkGenderChoised() {
   });
 }
 
+function exercicio20() {
+  const form = document.getElementsByClassName('right-content');
+  buttonRegister.addEventListener('click', (evt) => {
+    const firstName = document.getElementById('firstname');
+    const lastName = document.getElementById('lastname');
+    const emailPhone = document.getElementById('phone_email');
+    const birthDate = document.getElementById('birthdate');
+    const gender = document.querySelector('#facebook-form input[type=radio]:checked');
+    const frase20 = `Olá, ${firstName.value} ${lastName.value}, email/telefone: ${emailPhone.value}, data nascimento: ${birthDate.value} genero: ${gender.value}`;
+    const novaTagP = document.createElement('p')
+    novaTagP.innerText = frase20;
+    console.log(frase20);
+    const invalidForm = document.querySelector('#facebook-form p');
+    if (invalidForm === null) {
+      evt.preventDefault();
+      while (form[0].firstChild) {
+        form[0].removeChild(form[0].firstChild);
+      }
+      form[0].appendChild(novaTagP);
+    }
+  });
+}
+
 buttonLoginAlert();
 checkInfos();
 checkRadios();
 checkGenderChoised();
+exercicio20();
