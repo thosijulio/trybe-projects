@@ -38,6 +38,7 @@ function createCustomGender() {
   const form = document.getElementById('facebook-form');
   const input = document.createElement('input');
   input.id = 'customGender';
+  input.name = 'gender-custom';
   input.placeholder = 'Gênero';
   form.insertBefore(input, buttonRegister);
 }
