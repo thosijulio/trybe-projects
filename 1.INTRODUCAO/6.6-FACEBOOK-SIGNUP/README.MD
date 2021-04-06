@@ -131,21 +131,21 @@ Segue um exemplo de como o projeto pode se parecer depois de pronto:
   * Posicionar os radio buttons para ficar na mesma linha
   * Posicionar os radio buttons para ficar abaixo do label
 
-### 17. Botão para finalizar o cadastro dentro do formulário criado no requisito 10.
+### 17. Botão para finalizar o cadastro dentro do formulário criado no requisito 10. :heavy_check_mark:
 
   * Um botão com o texto "Cadastre-se" e id "facebook-register"
   * Deve ter a propriedade type igual a submit
 
-### 18. Validar se todos os campos foram preenchidos ao clicar no botão Cadastre-se.
+### 18. Validar se todos os campos foram preenchidos ao clicar no botão Cadastre-se. :heavy_check_mark:
 
   * Exibir uma mensagem "Campos inválidos" dentro do formulário caso pelo menos um campo não esteja preenchido
 
-### 19. Adicionar um novo campo de texto no formulário se a pessoa usuária selecionar a opção `Personalizado` no campo Gênero.
+### 19. Adicionar um novo campo de texto no formulário se a pessoa usuária selecionar a opção `Personalizado` no campo Gênero. :heavy_check_mark:
 
   * O novo campo dever ser uma campo de texto com o atributo name "gender-custom" e um placeholder "Gênero (opcional)"
   * O novo campo deve estar posicionado entre as opções de gênero e o botão "Cadastrar-se"
 
-### 20. Substitua o conteúdo do container com a classe right-content se o formulário estiver completamente preenchido e validado.
+### 20. Substitua o conteúdo do container com a classe right-content se o formulário estiver completamente preenchido e validado. :heavy_check_mark:
 
   * Deve haver um texto no modelo "Olá, Jonh Doe" (substitua John Doe pelo nome e sobrenome preenchido no formulário)
   * Exibir o e-mail ou telefone
