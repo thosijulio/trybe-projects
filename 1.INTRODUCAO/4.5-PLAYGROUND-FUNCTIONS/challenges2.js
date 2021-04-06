@@ -2,36 +2,30 @@
 function techList(nomesTecnologias, name) {
   const listaTecnologias = [];
   if (nomesTecnologias.length > 0) {
-    nomesTecnologias.sort()
-    for (const index in nomesTecnologias) {
-      listaTecnologias.push({tech: nomesTecnologias[index],
-        name: name
-      })
-    };
-    return listaTecnologias
-  }
-  else {
-    return 'Vazio!'
+    nomesTecnologias.sort();
+    for (let index = 0; index < nomesTecnologias.length; index _+= 1) {
+      listaTecnologias.push({ tech: nomesTecnologias[index],
+        name: name,
+      });
+    }
+    return listaTecnologias;
+  } else {
+     return 'Vazio!'
   }
 }
 
 // Desafio 11
 function generatePhoneNumber(numeroRecebido) {
-  if (numeroRecebido.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  }
+  if (numeroRecebido.length !== 11) return 'Array com tamanho incorreto.';
+  
   for (let index = 0; index < numeroRecebido.length; index += 1) {
     if (numeroRecebido[index] < 0 || numeroRecebido[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let contagemRepitidos = 0;
     for (let index2 = 0; index2 < numeroRecebido.length; index2 += 1) {
-      if (numeroRecebido[index] === numeroRecebido[index2]) {
-        contagemRepitidos += 1;
-      }
-      if (contagemRepitidos >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+      if (numeroRecebido[index] === numeroRecebido[index2]) contagemRepitidos += 1;
+      if (contagemRepitidos >= 3) return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   numeroRecebido.splice(0,0, '(');

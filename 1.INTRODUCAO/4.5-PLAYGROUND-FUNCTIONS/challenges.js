@@ -63,7 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1s < cat2s) {
     phrase = 'cat1';
     return phrase;
-  } else if (cat1s > cat2s) {
+  } 
+  if (cat1s > cat2s) {
     phrase = 'cat2';
     return phrase;
   }
