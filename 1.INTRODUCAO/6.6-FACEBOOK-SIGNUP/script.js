@@ -48,7 +48,7 @@ function cCheckGenderChoised(radioChoised) {
 
   if (radioChoised.id === 'Personalizado' && checkGenderText === null) {
     createCustomGender();
-  }  else if (radioChoised.id !== 'Personalizado' && checkGenderText) {
+  } else if (radioChoised.id !== 'Personalizado' && checkGenderText) {
     form.removeChild(checkGenderText);
   }
 }
