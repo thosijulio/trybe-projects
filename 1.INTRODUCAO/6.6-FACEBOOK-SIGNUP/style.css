@@ -87,7 +87,7 @@ body {
 #customGender {
   border: 1px solid transparent;
   height: 21px;
-  margin: 0px 50px 0px 0px;
+  margin: 0 50px 0 0;
   padding: 8px 10px;
   width: 172px;
 }

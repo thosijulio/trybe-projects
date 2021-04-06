@@ -1,3 +1,5 @@
+const buttonRegister = document.getElementById('facebook-register');
+
 function buttonLoginAlert() {
   const buttonLogin = document.getElementById('button-login');
   const emailPhoneInput = document.getElementById('user-email-phone');
@@ -7,7 +9,6 @@ function buttonLoginAlert() {
 }
 
 function checkInfos() {
-  const buttonRegister = document.getElementById('facebook-register');
   const invalidMessage = document.createElement('p');
   invalidMessage.innerText = 'Campos inválidos';
   buttonRegister.addEventListener('click', (evt) => {
@@ -22,7 +23,6 @@ function checkInfos() {
 }
 
 function checkRadios() {
-  const buttonRegister = document.getElementById('facebook-register');
   const invalidMessage = document.createElement('p');
   invalidMessage.innerText = 'Campos inválidos';
   buttonRegister.addEventListener('click', (evt) => {
@@ -34,12 +34,20 @@ function checkRadios() {
   });
 }
 
+function createCustomGender() {
+  const form = document.getElementById('facebook-form');
+  const input = document.createElement('input');
+  input.id = 'customGender';
+  input.placeholder = 'Gênero';
+  form.insertBefore(input, buttonRegister);
+}
+
 function checkGenderChoised() {
   const genderRadio = document.getElementById('gender-radio');
   const radioChoised = document.querySelectorAll('input[type=radio]');
+  const checkGenderText = document.getElementById('customGender');
+  const form = document.getElementById('facebook-form');
   genderRadio.addEventListener('click', () => {
-    const checkGenderText = document.getElementById('customGender');
-    const form = document.getElementById('facebook-form');
     for (let index = 0; index < radioChoised.length; index += 1) {
       if (radioChoised[index].checked) {
         if (radioChoised[index].id === 'Personalizado' && checkGenderText === null) {
@@ -50,14 +58,6 @@ function checkGenderChoised() {
       }
     }
   });
-}
-function createCustomGender() {
-  const form = document.getElementById('facebook-form');
-  const buttonRegister = document.getElementById('facebook-register');
-  const input = document.createElement('input');
-  input.id = 'customGender';
-  input.placeholder = 'Gênero';
-  form.insertBefore(input, buttonRegister);
 }
 
 buttonLoginAlert();
