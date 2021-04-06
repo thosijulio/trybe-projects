@@ -18,7 +18,7 @@ function checkInfos() {
         buttonRegister.parentNode.appendChild(invalidMessage);
       }
     }
-  })
+  });
 }
 
 function checkRadios() {
@@ -31,7 +31,7 @@ function checkRadios() {
       evt.preventDefault();
       buttonRegister.parentNode.appendChild(invalidMessage);
     }
-})
+  });
 }
 
 buttonLoginAlert();
