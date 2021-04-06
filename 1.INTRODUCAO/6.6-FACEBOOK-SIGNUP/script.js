@@ -42,19 +42,25 @@ function createCustomGender() {
   form.insertBefore(input, buttonRegister);
 }
 
+function cCheckGenderChoised (radioChoised) {
+  const checkGenderText = document.getElementById('customGender');
+  const form = document.getElementById('facebook-form');
+  
+  if (radioChoised.id === 'Personalizado' && checkGenderText === null) {
+    createCustomGender();
+  }
+  else if (radioChoised.id !== 'Personalizado' && checkGenderText) {
+    form.removeChild(checkGenderText);
+  }
+}
+
 function checkGenderChoised() {
   const genderRadio = document.getElementById('gender-radio');
   const radioChoised = document.querySelectorAll('input[type=radio]');
-  const checkGenderText = document.getElementById('customGender');
-  const form = document.getElementById('facebook-form');
   genderRadio.addEventListener('click', () => {
     for (let index = 0; index < radioChoised.length; index += 1) {
       if (radioChoised[index].checked) {
-        if (radioChoised[index].id === 'Personalizado' && checkGenderText === null) {
-          createCustomGender();
-        } else if (radioChoised[index].id !== 'Personalizado' && checkGenderText) {
-          form.removeChild(checkGenderText);
-        }
+        cCheckGenderChoised(radioChoised[index]);
       }
     }
   });
