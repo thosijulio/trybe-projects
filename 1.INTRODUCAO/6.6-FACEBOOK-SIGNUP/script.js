@@ -74,10 +74,10 @@ const birthDate = document.getElementById('birthdate');
 const form = document.getElementsByClassName('right-content');
 
 function eraseRightContent(newTag) {
-    while (form[0].firstChild) {
-      form[0].removeChild(form[0].firstChild);
-    }
-    form[0].appendChild(newTag);
+  while (form[0].firstChild) {
+    form[0].removeChild(form[0].firstChild);
+  }
+  form[0].appendChild(newTag);
 }
 
 function exercicio20() {
