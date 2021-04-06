@@ -83,15 +83,16 @@ function exercicio20() {
       genero: ${gender.value}`;
       const novaTagP = document.createElement('p');
       novaTagP.innerText = frase20;
-    }
-    const invalidForm = document.querySelector('#facebook-form p');
-    if (invalidForm === null) {
-      evt.preventDefault();
-      while (form[0].firstChild) {
-        form[0].removeChild(form[0].firstChild);
+      const invalidForm = document.querySelector('#facebook-form p');
+      if (invalidForm === null) {
+        evt.preventDefault();
+        while (form[0].firstChild) {
+          form[0].removeChild(form[0].firstChild);
+        }
+        form[0].appendChild(novaTagP);
       }
-      form[0].appendChild(novaTagP);
     }
+
   });
 }
 
