@@ -26,7 +26,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
 - [X] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
 - [X] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.9-MISTERY-LETTER)_
-- [ ] _[Bloco 6 - Página de Login do Facebook](1.INTRODUCAO/6.6-FACEBOOK-SIGNUP)_
+- [X] _[Bloco 6 - Página Inicial do Facebook](1.INTRODUCAO/6.6-FACEBOOK-SIGNUP)_
 - [X] _[Bloco 7 - JavaScript Testes Unitários](1.INTRODUCAO/7.4-JS-UNIT-TESTS)_
 
 # [...]
