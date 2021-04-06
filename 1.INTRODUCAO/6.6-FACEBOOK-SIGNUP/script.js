@@ -68,14 +68,14 @@ function checkGenderChoised() {
 }
 
 const firstName = document.getElementById('firstname');
+const form = document.getElementsByClassName('right-content');
 const lastName = document.getElementById('lastname');
 const emailPhone = document.getElementById('phone_email');
 const birthDate = document.getElementById('birthdate');
 
 function exercicio20() {
-  const form = document.getElementsByClassName('right-content');
   buttonRegister.addEventListener('click', (evt) => {
-    const gender = document.querySelector('#facebook-form input[type=radio]:checked');
+    const gender = document.querySelector('input[type=radio]:checked');
     const frase20 = `Olá, ${firstName.value} ${lastName.value}, 
     email/telefone: ${emailPhone.value}, 
     data nascimento: ${birthDate.value} 
