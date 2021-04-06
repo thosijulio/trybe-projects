@@ -79,3 +79,7 @@ body {
   align-self: flex-start;
   width: 200px;
 }
+
+#facebook-form p {
+  margin: 10px 50px;
+}
