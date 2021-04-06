@@ -68,10 +68,17 @@ function checkGenderChoised() {
 }
 
 const firstName = document.getElementById('firstname');
-const form = document.getElementsByClassName('right-content');
 const lastName = document.getElementById('lastname');
 const emailPhone = document.getElementById('phone_email');
 const birthDate = document.getElementById('birthdate');
+const form = document.getElementsByClassName('right-content');
+
+function eraseRightContent(newTag) {
+    while (form[0].firstChild) {
+      form[0].removeChild(form[0].firstChild);
+    }
+    form[0].appendChild(newTag);
+}
 
 function exercicio20() {
   buttonRegister.addEventListener('click', (evt) => {
@@ -86,13 +93,9 @@ function exercicio20() {
       const invalidForm = document.querySelector('#facebook-form p');
       if (invalidForm === null) {
         evt.preventDefault();
-        while (form[0].firstChild) {
-          form[0].removeChild(form[0].firstChild);
-        }
-        form[0].appendChild(novaTagP);
+        eraseRightContent(novaTagP);
       }
     }
-
   });
 }
 
