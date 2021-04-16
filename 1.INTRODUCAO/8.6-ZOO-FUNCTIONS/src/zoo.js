@@ -210,6 +210,7 @@ function increasePrices(percentage) {
   });
 
   data.prices = { Adult: adultValue, Senior: seniorValue, Child: childValue };
+  return data.prices;
 }
 
 function employeeCoverage(idOrName) {
