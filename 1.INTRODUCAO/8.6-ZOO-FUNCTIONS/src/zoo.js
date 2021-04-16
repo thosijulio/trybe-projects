@@ -195,10 +195,12 @@ function oldestFromFirstSpecies(id) {
   });
   return Object.values(oldest);
 }
-console.log(oldestFromFirstSpecies('9e7d4524-363c-416a-8759-8aa7e50c0992'))
+
 function increasePrices(percentage) {
-  // seu código aqui
-  return percentage;
+  Object.keys(data.prices).forEach((typePrice, index) => {
+    data.prices[typePrice] = (data.prices[typePrice] * ((percentage / 100) + 1)).toPrecision(4);
+  });
+  console.log(data.prices);
 }
 
 function employeeCoverage(idOrName) {
