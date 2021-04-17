@@ -28,5 +28,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.9-MISTERY-LETTER)_
 - [X] _[Bloco 6 - Página Inicial do Facebook](1.INTRODUCAO/6.6-FACEBOOK-SIGNUP)_
 - [X] _[Bloco 7 - JavaScript Testes Unitários](1.INTRODUCAO/7.4-JS-UNIT-TESTS)_
-
+- [X] _[Bloco 8 - Zoo Functions](1.INTRODUCAO/8.8-ZOO-FUNCTIONS)_
 # [...]
