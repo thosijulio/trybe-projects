@@ -1,4 +1,4 @@
-window.onload = function onload() { };
+
 
 function createProductImageElement(imageSource) {
   const img = document.createElement('img');
@@ -13,6 +13,25 @@ function createCustomElement(element, className, innerText) {
   e.innerText = innerText;
   return e;
 }
+
+async function createProductList() {
+  return fetch('https://api.mercadolibre.com/sites/MLB/search?q=$computador')
+  .then((response) => response.json())
+  .then((list) => list.results);
+}
+
+async function defineProducts() {
+  const products = await createProductList();
+  const productsSection = document.querySelector('.items');
+  products.forEach((product) => {
+    const sku = product.id;
+    const name = product.title;
+    const image = product.thumbnail;
+    productsSection.appendChild(createProductItemElement({ sku, name, image }))
+  })
+}
+
+defineProducts();
 
 function createProductItemElement({ sku, name, image }) {
   const section = document.createElement('section');
@@ -41,4 +60,4 @@ function createCartItemElement({ sku, name, salePrice }) {
   li.addEventListener('click', cartItemClickListener);
   return li;
 }
-//Julio H. Thosi
+// Julio H. Thosi
