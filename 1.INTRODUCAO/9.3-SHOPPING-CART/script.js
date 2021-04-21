@@ -14,6 +14,18 @@ function createCustomElement(element, className, innerText) {
   return e;
 }
 
+function createProductItemElement({ sku, name, image }) {
+  const section = document.createElement('section');
+  section.className = 'item';
+
+  section.appendChild(createCustomElement('span', 'item__sku', sku));
+  section.appendChild(createCustomElement('span', 'item__title', name));
+  section.appendChild(createProductImageElement(image));
+  section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'));
+
+  return section;
+}
+
 async function createProductList() {
   return fetch('https://api.mercadolibre.com/sites/MLB/search?q=$computador')
   .then((response) => response.json())
@@ -27,30 +39,18 @@ async function defineProducts() {
     const sku = product.id;
     const name = product.title;
     const image = product.thumbnail;
-    productsSection.appendChild(createProductItemElement({ sku, name, image }))
-  })
+    productsSection.appendChild(createProductItemElement({ sku, name, image }));
+  });
 }
 
 defineProducts();
-
-function createProductItemElement({ sku, name, image }) {
-  const section = document.createElement('section');
-  section.className = 'item';
-
-  section.appendChild(createCustomElement('span', 'item__sku', sku));
-  section.appendChild(createCustomElement('span', 'item__title', name));
-  section.appendChild(createProductImageElement(image));
-  section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'));
-
-  return section;
-}
 
 function getSkuFromProductItem(item) {
   return item.querySelector('span.item__sku').innerText;
 }
 
 function cartItemClickListener(event) {
-  // coloque seu código aqui
+  return event;
 }
 
 function createCartItemElement({ sku, name, salePrice }) {
@@ -60,4 +60,5 @@ function createCartItemElement({ sku, name, salePrice }) {
   li.addEventListener('click', cartItemClickListener);
   return li;
 }
-// Julio H. Thosi
+
+createCartItemElement();
