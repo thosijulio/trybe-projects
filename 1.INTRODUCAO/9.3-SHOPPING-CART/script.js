@@ -78,6 +78,13 @@ function addToCart() {
   });
 }
 
+function deleteItemCart() {
+  const list = document.querySelector('ol');
+  list.addEventListener('click', (event) => {
+    list.removeChild(event.target);
+  });
+}
+
 /*
 function getSkuFromProductItem(item) {
   return item.querySelector('span.item__sku').innerText;
@@ -85,4 +92,7 @@ function getSkuFromProductItem(item) {
 
 window.onload = function onload() { 
   uploadList();
+  deleteItemCart();
 };
+
+// teste
