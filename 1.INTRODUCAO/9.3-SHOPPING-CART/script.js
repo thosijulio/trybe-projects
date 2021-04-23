@@ -75,6 +75,16 @@ function saveCart() {
     }
 }
 
+async function deleteCart() {
+  const list = document.querySelector('ol');
+  const eraseButton = document.querySelector('.empty-cart');
+  eraseButton.addEventListener('click', () => {
+    list.innerText = '';
+    saveCart();
+    sumCartValue();
+  });
+}
+
 function addToCart() {
   const buttonAdd = document.getElementsByClassName('item__add');
   const cartList = document.querySelector('ol');
@@ -141,6 +151,7 @@ window.onload = function onload() {
   deleteItemCart();
   loadCart();
   sumCartValue();
+  deleteCart();
 };
 
 // teste
