@@ -30,6 +30,40 @@ function createProductList() {
    .then((list) => list.results);
  }
 
+ function cartItemClickListener(event) {
+   return event;
+}
+cartItemClickListener();
+
+function createCartItemElement({ sku, name, salePrice }) {
+  const li = document.createElement('li');
+  li.className = 'cart__item';
+  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
+  li.addEventListener('click', cartItemClickListener);
+  return li;
+}
+
+function addToCart() {
+  const buttonAdd = document.getElementsByClassName('item__add');
+  const cartList = document.querySelector('ol');
+  for (let index = 0; index < buttonAdd.length; index += 1) {
+    buttonAdd[index].addEventListener('click', () => {
+      const itemSku = buttonAdd[index].parentNode.childNodes[0].innerText;
+      fetch(`https://api.mercadolibre.com/items/${itemSku}`)
+      .then((response) => response.json())
+      .then((object) => {
+        const itemToAddCart = {
+          sku: object.id,
+          name: object.title,
+          salePrice: object.price,
+        };
+        cartList.appendChild(createCartItemElement(itemToAddCart));
+      });
+      // createCartItemElement(objectToAdd);
+    });
+  }
+}
+
  function uploadList() {
   createProductList()
   .then((list) => {
@@ -40,30 +74,15 @@ function createProductList() {
       const image = product.thumbnail;
       sectionItems.appendChild(createProductItemElement({ sku, name, image }));
     });
+    addToCart();
   });
 }
-
-window.onload = function onload() { 
-  uploadList();
-};
 
 /*
 function getSkuFromProductItem(item) {
   return item.querySelector('span.item__sku').innerText;
-}
+} */
 
-function cartItemClickListener(event) {
-  const buttonAdd = document.getElementsByClassName('item__add');
-  console.log(buttonAdd.length);
-}
-
-cartItemClickListener('click');
-
-function createCartItemElement({ sku, name, salePrice }) {
-  const li = document.createElement('li');
-  li.className = 'cart__item';
-  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
-  li.addEventListener('click', cartItemClickListener);
-  return li;
-}
-*/
+window.onload = function onload() { 
+  uploadList();
+};
