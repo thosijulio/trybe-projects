@@ -29,5 +29,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[Bloco 6 - Página Inicial do Facebook](1.INTRODUCAO/6.6-FACEBOOK-SIGNUP)_
 - [X] _[Bloco 7 - JavaScript Testes Unitários](1.INTRODUCAO/7.4-JS-UNIT-TESTS)_
 - [X] _[Bloco 8 - Zoo Functions](1.INTRODUCAO/8.6-ZOO-FUNCTIONS)_
-- [ ] _[Bloco 9 - Shopping Cart](1.INTRODUCAO/9.3-SHOPPING-CART)_
+- [X] _[Bloco 9 - Shopping Cart](1.INTRODUCAO/9.3-SHOPPING-CART)_
 # [...]
