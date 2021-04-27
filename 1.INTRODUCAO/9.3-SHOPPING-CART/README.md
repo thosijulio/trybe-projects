@@ -1,4 +1,4 @@
-# Dia 8.6: Projeto - Shopping Cart
+# Dia 9.3: Projeto - Shopping Cart
 
 ## &nbsp; Descrição do Projeto:
 Nesse projeto foi desenvolvido um site do tipo "carrinho de compras" totalmente dinâmico. Foi feito consumindo dados diretamente de uma API do Mercado Livre para buscar produtos à venda. O gif abaixo simula o comportamento esperado do site:
