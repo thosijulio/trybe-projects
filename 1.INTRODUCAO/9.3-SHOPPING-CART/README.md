@@ -267,7 +267,7 @@ Quando colocado o id `MLB1341706310`, o retorno desse _endpoint_ será algo no f
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
 O carrinho de compras deve ser salvo no **LocalStorage**. Todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
 
-### 5. Somar o valor total dos itens do carrinho de compras de forma assíncrona.
+### 5. Somar o valor total dos itens do carrinho de compras de forma assíncrona. :heavy_check_mark:
 Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto.
  * Fazer essa soma de forma *assíncrona* usando `async/await`.
  * O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
