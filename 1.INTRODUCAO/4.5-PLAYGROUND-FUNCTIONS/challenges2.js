@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(nomesTecnologias, name) {
-  let listaTecnologias = [];
+  const listaTecnologias = [];
   if (nomesTecnologias.length > 0) {
     nomesTecnologias.sort();
     nomesTecnologias.forEach((materia) => {
@@ -39,7 +39,7 @@ function generatePhoneNumber(numeroRecebido) {
   numeroRecebido.splice(4, 0, ' ');
   numeroRecebido.splice(10, 0, '-');
 
-  let numeroFormatado = numeroRecebido.join('');
+  const numeroFormatado = numeroRecebido.join('');
   return numeroFormatado;
 }
 

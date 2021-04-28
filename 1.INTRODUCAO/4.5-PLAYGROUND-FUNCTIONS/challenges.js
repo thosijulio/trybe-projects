@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 Playgroynd Functions
 function compareTrue(value1, value2) {
   if (value1 && value2) return true;
   return false;
@@ -61,6 +61,7 @@ function fizzBuzz(numerosRecebidos) {
   numerosRecebidos.forEach((numero) => {
     if ((numero % 3) === 0 && (numero % 5) === 0) {
       arrayResultado.push('fizzBuzz');
+
     } else if ((numero % 3) === 0) {
       arrayResultado.push('fizz');
     } else if ((numero % 5) === 0) {

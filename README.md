@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Trybe" src="https://github.com/thosijulio/trybe-exercises/blob/main/trybe_logo.jpeg" />
+    <img alt="Trybe" src="https://github.com/thosijulio/trybe-projects/blob/main/trybe-logo.png">
 </h1>
 
 
@@ -19,12 +19,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
-- [x] _[Bloco 3 - Lessons Learned](1.INTRODUCAO/3.5-LESSONS-LEARNED)_
-- [ ] _[Bloco 4 - Playground Functions](1.INTRODUCAO/4.5-PLAYGROUND-FUNCTIONS)_
-- [ ] _[Bloco 5 - Arte com Pixels](1.INTRODUCAO/5.5-PIXELS-ART)_
-- [ ] _[Bloco 5 - Lista de tarefas](1.INTRODUCAO/5.6-TODO-LIST)_
-- [ ] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
-- [ ] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
-- [ ] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.8-MISTERY-LETTER)_
-
+- [X] _[Bloco 3 - Lessons Learned](1.INTRODUCAO/3.5-LESSONS-LEARNED)_
+- [X] _[Bloco 4 - Playground Functions](1.INTRODUCAO/4.5-PLAYGROUND-FUNCTIONS)_
+- [X] _[Bloco 5 - Arte com Pixels](1.INTRODUCAO/5.5-PIXELS-ART)_
+- [X] _[Bloco 5 - Lista de Tarefas](1.INTRODUCAO/5.6-TODO-LIST)_
+- [X] _[(Bônus) Bloco 5 - Meme Generator](1.INTRODUCAO/5.7-MEME-GENERATOR)_
+- [X] _[(Bônus) Bloco 5 - Adivinhe a Cor](1.INTRODUCAO/5.8-COLOR-GUESS)_
+- [X] _[(Bônus) Bloco 5 - Carta Misteriosa](1.INTRODUCAO/5.9-MISTERY-LETTER)_
+- [X] _[Bloco 6 - Página Inicial do Facebook](1.INTRODUCAO/6.6-FACEBOOK-SIGNUP)_
+- [X] _[Bloco 7 - JavaScript Testes Unitários](1.INTRODUCAO/7.4-JS-UNIT-TESTS)_
+- [X] _[Bloco 8 - Zoo Functions](1.INTRODUCAO/8.6-ZOO-FUNCTIONS)_
+- [X] _[Bloco 9 - Shopping Cart](1.INTRODUCAO/9.3-SHOPPING-CART)_
 # [...]
