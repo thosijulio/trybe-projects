@@ -1,8 +1,6 @@
 // Desafio 1 Playgroynd Functions
 function compareTrue(value1, value2) {
-  if (value1 && value2) {
-    return true;
-  }
+  if (value1 && value2) return true;
   return false;
 }
 
@@ -14,43 +12,30 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringRecebida) {
-  let stringTransformada = stringRecebida.split(' ');
+  const stringTransformada = stringRecebida.split(' ');
   return stringTransformada;
 }
 
 // Desafio 4
-function concatName(stringRecebida) {
-  let nomeConcatenado = `${stringRecebida[stringRecebida.length - 1]}, ${stringRecebida[0]}`;
+function concatName(arr) {
+  const nomeConcatenado = `${arr[(arr.length) - 1]}, ${arr[0]}`;
   return nomeConcatenado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosGanhos = (wins * 3) + ties;
+  const pontosGanhos = (wins * 3) + ties;
   return pontosGanhos;
 }
 
 // Desafio 6
-
-const acharMaiorNumero = (arr) => {
-  let maiorNumero = arr[0];
-  for (let index = 0; index < arr.length; index += 1) {
-    if (maiorNumero < arr[index]) maiorNumero = arr[index];
-  }
-  return maiorNumero;
-};
-
-function highestCount(arrayNumeros) {
-  let maiorNumero = acharMaiorNumero(arrayNumeros);
-  let quantidadeAparicoes = 0;
-
-  for (let index = 0; index < arrayNumeros.length; index += 1) {
-    if (maiorNumero === arrayNumeros[index]) {
-      quantidadeAparicoes += 1;
-    }
-  }
-
-  return quantidadeAparicoes;
+function highestCount(arr) {
+  let repeatGreatest = 0;
+  const greatest = arr.reduce((acc, curr) => ((acc < curr) ? curr : acc));
+  arr.forEach((number) => {
+    if (number === greatest) repeatGreatest += 1;
+  });
+  return repeatGreatest;
 }
 
 // Desafio 7
@@ -63,8 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1s < cat2s) {
     phrase = 'cat1';
     return phrase;
-  } 
-  if (cat1s > cat2s) {
+  } if (cat1s > cat2s) {
     phrase = 'cat2';
     return phrase;
   }
@@ -74,17 +58,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numerosRecebidos) {
   let arrayResultado = [];
-  for (let index = 0; index < numerosRecebidos.length; index += 1) {
-    if ((numerosRecebidos[index] % 3) === 0 && (numerosRecebidos[index] % 5) === 0) {
+  numerosRecebidos.forEach((numero) => {
+    if ((numero % 3) === 0 && (numero % 5) === 0) {
       arrayResultado.push('fizzBuzz');
-    } else if ((numerosRecebidos[index] % 3) === 0) {
+
+    } else if ((numero % 3) === 0) {
       arrayResultado.push('fizz');
-    } else if ((numerosRecebidos[index] % 5) === 0) {
+    } else if ((numero % 5) === 0) {
       arrayResultado.push('buzz');
     } else {
       arrayResultado.push('bug!');
     }
-  }
+  });
   return arrayResultado;
 }
 
