@@ -3,6 +3,7 @@ import React from 'react';
 import InputTextType from './InputTextType';
 import InputNumberType from './InputNumberType';
 import InputSelectType from './InputSelectType';
+import InputTextAreaType from './InputTextAreaType';
 
 class AddMovie extends React.Component {
   constructor() {
@@ -21,6 +22,10 @@ class AddMovie extends React.Component {
   handleFormChange(event) {
     const { value, name } = event.target;
     this.setState({ [name]: value });
+  }
+
+  handleClick() {
+
   }
 
   render() {
@@ -46,16 +51,12 @@ class AddMovie extends React.Component {
           value={ imagePath }
           onChange={ this.handleFormChange }
         />
-        <label htmlFor="storyline" data-testid="storyline-input-label">
-          Sinopse
-          <textarea
-            id="storyline"
-            data-testid="storyline-input"
-            name="storyline"
-            value={ storyline }
-            onChange={ this.handleFormChange }
-          />
-        </label>
+        <InputTextAreaType
+          text="Sinopse"
+          name="storyline"
+          value={ storyline }
+          onChange={ this.handleFormChange }
+        />
         <InputNumberType
           text="Avaliação"
           name="rating"
@@ -68,6 +69,9 @@ class AddMovie extends React.Component {
           value={ genre }
           onChange={ this.handleFormChange }
         />
+        <button data-testid="send-button" type="button" onClick={ this.handleClick }>
+          Adicionar filme
+        </button>
       </form>
     );
   }
