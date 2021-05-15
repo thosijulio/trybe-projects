@@ -17,13 +17,8 @@ class AddMovie extends React.Component {
   }
 
   handleFormChange(event) {
-    const { type } = event;
-    if (type !== 'checkbox') {
-      const { value, name } = event.target;
-      this.setState({
-        [name]: value,
-      });
-    }
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
   }
 
   render() {
@@ -35,6 +30,12 @@ class AddMovie extends React.Component {
           text="Título"
           name="title"
           value={ title }
+          onChange={ this.handleFormChange }
+        />
+        <InputTextType
+          text="Subtítulo"
+          name="subtitle"
+          value={ subtitle }
           onChange={ this.handleFormChange }
         />
       </form>
