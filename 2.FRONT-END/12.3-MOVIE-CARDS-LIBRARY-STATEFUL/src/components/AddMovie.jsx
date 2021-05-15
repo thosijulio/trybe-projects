@@ -1,5 +1,6 @@
 // implement AddMovie component here
 import React from 'react';
+import InputTextType from './InputTextType';
 
 class AddMovie extends React.Component {
   constructor() {
@@ -30,39 +31,12 @@ class AddMovie extends React.Component {
 
     return (
       <form data-testid="add-movie-form">
-        <label htmlFor="title" data-testeid="title-input-label">
-          Título
-          <input
-            type="text"
-            id="title"
-            name="title"
-            data-testeid="title-input"
-            value={ title }
-            onChange={ this.handleFormChange }
-          />
-        </label>
-        <label htmlFor="subtitle" data-testid="subtitle-input-label">
-          Subtítulo
-          <input
-            type="text"
-            id="subtitle"
-            name="subtitle"
-            value={ subtitle }
-            data-testid="subtitle-input"
-            onChange={ this.handleFormChange }
-          />
-        </label>
-        <label htmlFor="imagePath" data-testid="image-input-label">
-          Imagem
-          <input
-            type="text"
-            id="imagePath"
-            name="imagePath"
-            value={ imagePath }
-            data-testid="image-input"
-            onChange={ this.handleFormChange }
-          />
-        </label>
+        <InputTextType
+          text="Título"
+          name="title"
+          value={ title }
+          onChange={ this.handleFormChange }
+        />
       </form>
     );
   }
