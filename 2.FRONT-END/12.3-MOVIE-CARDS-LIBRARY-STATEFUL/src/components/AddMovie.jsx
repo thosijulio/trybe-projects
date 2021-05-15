@@ -35,15 +35,15 @@ class AddMovie extends React.Component {
             id="title-input"
             type="text"
             data-testeid="title-input"
-            onChange={ this.handleFormChange }
             value={ title }
+            onChange={ this.handleFormChange }
           />
         </label>
-        <input value={ subtitle } />
-        <input value={ imagePath } />
-        <input value={ storyLine } />
-        <input value={ rating } />
-        <input value={ genre } />
+        <input value={ subtitle } onChange={ this.handleFormChange } />
+        <input value={ imagePath } onChange={ this.handleFormChange } />
+        <input value={ storyLine } onChange={ this.handleFormChange } />
+        <input value={ rating } onChange={ this.handleFormChange } />
+        <input value={ genre } onChange={ this.handleFormChange } />
       </form>
     );
   }
