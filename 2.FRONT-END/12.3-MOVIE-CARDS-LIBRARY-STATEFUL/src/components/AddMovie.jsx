@@ -1,6 +1,7 @@
 // implement AddMovie component here
 import React from 'react';
 import InputTextType from './InputTextType';
+import InputNumberType from './InputNumberType';
 
 class AddMovie extends React.Component {
   constructor() {
@@ -54,6 +55,12 @@ class AddMovie extends React.Component {
             onChange={ this.handleFormChange }
           />
         </label>
+        <InputNumberType
+          text="Avaliação"
+          name="rating"
+          value={ rating }
+          onChange={ this.handleFormChange }
+        />
       </form>
     );
   }
