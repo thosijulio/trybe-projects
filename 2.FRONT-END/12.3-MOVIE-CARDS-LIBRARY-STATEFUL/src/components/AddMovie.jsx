@@ -1,6 +1,6 @@
 // implement AddMovie component here
 import React from 'react';
-import InputTextType from './InputTextForm';
+import InputTextType from './InputTextType';
 
 class AddMovie extends React.Component {
   constructor() {
@@ -9,7 +9,7 @@ class AddMovie extends React.Component {
       subtitle: '',
       title: '',
       imagePath: '',
-      storyLine: '',
+      storyline: '',
       rating: 0,
       genre: 'action',
     };
@@ -22,7 +22,7 @@ class AddMovie extends React.Component {
   }
 
   render() {
-    const { title, subtitle, imagePath, storyLine, rating, genre } = this.state;
+    const { title, subtitle, imagePath, storyline, rating, genre } = this.state;
 
     return (
       <form data-testid="add-movie-form">
@@ -44,6 +44,16 @@ class AddMovie extends React.Component {
           value={ imagePath }
           onChange={ this.handleFormChange }
         />
+        <label htmlFor="storyline" data-testid="storyline-input-label">
+          Sinopse
+          <textarea
+            id="storyline"
+            data-testid="storyline-input"
+            name="storyline"
+            value={ storyline }
+            onChange={ this.handleFormChange }
+          />
+        </label>
       </form>
     );
   }
