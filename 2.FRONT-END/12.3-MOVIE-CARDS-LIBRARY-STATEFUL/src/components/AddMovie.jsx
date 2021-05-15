@@ -18,9 +18,9 @@ class AddMovie extends React.Component {
   handleFormChange(event) {
     const { type } = event;
     if (type !== 'checkbox') {
-      const { value } = event.target;
+      const { value, name } = event.target;
       this.setState({
-        title: value,
+        [name]: value,
       });
     }
   }
@@ -29,11 +29,12 @@ class AddMovie extends React.Component {
     const { title, subtitle, imagePath, storyLine, rating, genre } = this.state;
     return (
       <form data-testid="add-movie-form">
-        <label htmlFor="title-input" data-testeid="title-input-label">
+        <label htmlFor="title" data-testeid="title-input-label">
           Título
           <input
-            id="title-input"
             type="text"
+            id="title"
+            name="title"
             data-testeid="title-input"
             value={ title }
             onChange={ this.handleFormChange }
