@@ -22,7 +22,25 @@ class MovieLibrary extends React.Component {
 
   onSearchTextChange(event) {
     const { value } = event.target;
-    this.setState({ searchText: value });
+    const { movies } = this.props;
+    this.setState({
+      searchText: value,
+      movies,
+    });
+    if (value !== '') {
+      this.setState((oldState) => ({
+        movies: oldState.movies.filter((movie) => {
+          let { title, subtitle, storyline } = movie;
+          title = title.toLowerCase();
+          subtitle = subtitle.toLowerCase();
+          storyline = storyline.toLowerCase();
+          if (title.includes(value)) return 1;
+          if (subtitle.includes(value)) return 1;
+          if (storyline.includes(value)) return 1;
+          return 0;
+        }),
+      }));
+    }
   }
 
   onBookmarkedChange(event) {
