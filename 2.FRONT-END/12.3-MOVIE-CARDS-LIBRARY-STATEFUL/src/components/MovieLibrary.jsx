@@ -30,7 +30,7 @@ class MovieLibrary extends React.Component {
     this.setState({ bookmarkedOnly: checked });
   }
 
-  onSelectedGenderChange(event) {
+  onSelectedGenreChange(event) {
     const { value } = event.target;
     this.setState({ selectedGenre: value });
   }
@@ -45,7 +45,7 @@ class MovieLibrary extends React.Component {
           bookmarkedOnly={ bookmarkedOnly }
           onBookmarkedChange={ this.onBookmarkedChange }
           selectedGenre={ selectedGenre }
-          onSelectedGenderChange={ this.onSelectedGenderChange }
+          onSelectedGenreChange={ this.onSelectedGenreChange }
         />
         <AddMovie onClick={ () => {} } />
         <MovieList movies={ movies } />
