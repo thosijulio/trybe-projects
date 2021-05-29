@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import * as movieAPI from '../services/movieAPI';
-import { Loading } from '../components';
+// import * as movieAPI from '../services/movieAPI';
+// import { Loading } from '../components';
 
 class MovieDetails extends Component {
   render() {
@@ -9,6 +9,11 @@ class MovieDetails extends Component {
     // if (true) return <Loading />;
 
     const { title, storyline, imagePath, genre, rating, subtitle } = {};
+
+    function excluir(title2) {
+      console.log(title2);
+    }
+    excluir(title);
 
     return (
       <div data-testid="movie-details">
