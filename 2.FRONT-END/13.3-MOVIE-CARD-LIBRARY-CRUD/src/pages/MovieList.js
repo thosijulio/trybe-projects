@@ -26,7 +26,14 @@ class MovieList extends Component {
     }
 
     return (
-      <div data-testid="movie-list">
+      <div
+        data-testid="movie-list"
+        style={ ({
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'center' }) }
+      >
         {movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
       </div>
     );

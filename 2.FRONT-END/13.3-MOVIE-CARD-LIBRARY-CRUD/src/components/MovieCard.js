@@ -9,15 +9,23 @@ class MovieCard extends React.Component {
       <div
         data-testid="movie-card"
         style={ ({
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          alignItems: 'center' }) }
+          textAlign: 'center',
+          alignItems: 'center',
+          width: '300px',
+          margin: '30px 100px',
+          border: '1px solid black',
+        }) }
       >
         <h2>{ title }</h2>
         <h3>{ subtitle }</h3>
-        <img src={ imagePath } alt={ `${title} cover art` } />
-        <h4>{ storyline }</h4>
+        <img
+          src={ imagePath }
+          alt={ `${title} cover art` }
+          width="300px"
+          margin="auto"
+          height="200px"
+        />
+        <h4 style={ ({ textAlign: 'center' }) }>{ storyline }</h4>
         <Link to={ `/movies/${id}` }>VER DETALHES</Link>
       </div>
     );
