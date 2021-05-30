@@ -13,11 +13,9 @@ class MovieCard extends React.Component {
           alignItems: 'center',
           width: '300px',
           margin: '30px 100px',
-          border: '1px solid black',
+          border: '3px solid black',
         }) }
       >
-        <h2>{ title }</h2>
-        <h3>{ subtitle }</h3>
         <img
           src={ imagePath }
           alt={ `${title} cover art` }
@@ -25,7 +23,9 @@ class MovieCard extends React.Component {
           margin="auto"
           height="200px"
         />
-        <h4 style={ ({ textAlign: 'center' }) }>{ storyline }</h4>
+        <h2>{ title }</h2>
+        <h3>{ subtitle }</h3>
+        <p style={ ({ textAlign: 'center' }) }>{ storyline }</p>
         <Link to={ `/movies/${id}` }>VER DETALHES</Link>
       </div>
     );
