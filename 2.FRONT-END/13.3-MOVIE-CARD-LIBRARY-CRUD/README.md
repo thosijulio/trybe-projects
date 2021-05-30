@@ -11,7 +11,7 @@ E apagar um filme da lista - DELETE;
 Segue um exemplo de como a biblioteca deveria se parecer:
 
 <p align="center">
-  <img alt="exemplo de Movie Card Library CRUD" src="./movie-card-library-crud-example.gif">
+  <img alt="exemplo de Movie Card Library CRUD" src="./movie-card-library-crud.gif">
 </p>
 
 ## Habilidades Desenvolvidas:
