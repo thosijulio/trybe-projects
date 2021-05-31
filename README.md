@@ -34,5 +34,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 - [X] _[Bloco 11 - Movie Cards Library](2.FRONT-END/11.3-MOVIE-CARDS-LIBRARY)_
+- [ ] _[Bloco 12 - Movie Cards Library Stateful](2.FRONT-END/11.3-MOVIE-CARDS-LIBRARY-STATEFUL)_
 
 # [...]
