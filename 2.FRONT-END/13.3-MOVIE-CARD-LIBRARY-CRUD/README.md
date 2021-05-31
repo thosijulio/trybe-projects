@@ -1,4 +1,4 @@
-# Dia 11.3: Projeto - Movie Cards Library
+# Dia 13.3: Projeto - Movie Cards Library CRUD
 
 ## &nbsp; Descrição do Projeto:
 Criação um CRUD de uma biblioteca de cartões de filmes em React. CRUD significa: Create, Read, Update and Delete.
