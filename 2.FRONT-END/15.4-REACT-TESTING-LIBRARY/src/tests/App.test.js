@@ -1,7 +1,7 @@
 import React from 'react';
+import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 import App from '../App';
-import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 
 describe('Teste do componente App.js', () => {
@@ -65,7 +65,7 @@ describe('Teste do componente App.js', () => {
 
     history.push('/404');
 
-    const errorImage = screen.getByText(/Page requested not found/i)
+    const errorImage = screen.getByText(/Page requested not found/i);
 
     expect(errorImage).toBeDefined();
   });
