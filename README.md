@@ -36,5 +36,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[Bloco 11 - Movie Cards Library](2.FRONT-END/11.3-MOVIE-CARDS-LIBRARY)_
 - [ ] _[Bloco 12 - Movie Cards Library Stateful](2.FRONT-END/12.3-MOVIE-CARDS-LIBRARY-STATEFUL)_
 - [X] _[Bloco 13 - Movie Cards Library CRUD](2.FRONT-END/13.3-MOVIE-CARD-LIBRARY-CRUD)_
+- [X] _Bloco 14 - FrontEnd Online Store (Projeto em Grupo)_
+- [X] _[Bloco 15 - Testes em React](2.FRONT-END/15.4-REACT-TESTING-LIBRARY)_
 
 # [...]
