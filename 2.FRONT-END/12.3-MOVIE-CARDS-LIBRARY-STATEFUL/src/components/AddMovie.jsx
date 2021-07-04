@@ -26,7 +26,24 @@ class AddMovie extends React.Component {
   }
 
   renderForm(name, type, legend, value) {
-    if (type !== 'textarea') {
+    if (type === 'select') {
+      return (
+        <label htmlFor={ `${name}` } data-testid={ `${name}-input-label` }>
+          {legend}
+          <select
+            id={ name }
+            type={ type }
+            data-testid={ `${name}-input` }
+            value={ value }
+            onChange={ this.handleFormChange }
+          >
+            <option value="action" data-testid="genre-option">Ação</option>
+            <option value="comedy" data-testid="genre-option">Comédia</option>
+            <option value="thriller" data-testid="genre-option">Suspense</option>
+          </select>
+        </label>
+      );
+    } if (type !== 'textarea') {
       return (
         <label htmlFor={ `${name}` } data-testid={ `${name}-input-label` }>
           {legend}
@@ -62,7 +79,7 @@ class AddMovie extends React.Component {
         { this.renderForm('image', 'text', 'Imagem', imagePath)}
         { this.renderForm('storyline', 'textarea', 'Sinopse', storyline)}
         { this.renderForm('rating', 'number', 'Avaliação', rating)}
-        <p>{ genre + rating + storyline }</p>
+        { this.renderForm('genre', 'select', 'Gênero', genre)}
       </form>
     );
   }
