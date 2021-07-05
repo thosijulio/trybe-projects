@@ -34,23 +34,23 @@ Esse componente renderiza uma barra com filtros acima da listagem de cartões. Q
   - `selectedGenre`, uma string
   - `onSelectedGenreChange`, uma callback
  
-### 2 - Renderizar um formulário dentro de `<SearchBar />`
+### 2 - Renderizar um formulário dentro de `<SearchBar />` ✔️
 
 Dentro desse formulário há campos usados na filtragem de cartões.
 
-### 3 - Renderizar um input do tipo texto dentro do formulário em `<SearchBar />`
+### 3 - Renderizar um input do tipo texto dentro do formulário em `<SearchBar />` ✔️
 
 - O input tem uma label associada com o texto: **"Inclui o texto:"**;
 - A propriedade `value` do input recebe o valor da prop `searchText`;
 - A propriedade `onChange` do input recebe o valor da prop `onSearchTextChange`.
   
-### 4 - Renderizar um input do tipo checkbox dentro do formulário em `<SearchBar />`
+### 4 - Renderizar um input do tipo checkbox dentro do formulário em `<SearchBar />` ✔️
 
 - O input tem uma label associada com o texto: **"Mostrar somente favoritos"**;
 - A propriedade `checked` do input recebe o valor da prop `bookmarkedOnly`;
 - A propriedade `onChange` do input recebe o valor da prop `onBookmarkedChange`.
  
-### 5 - Renderize um select dentro do formulário em `<SearchBar />`
+### 5 - Renderize um select dentro do formulário em `<SearchBar />` ✔️
 
 - O select tem uma label associada com o texto: **"Filtrar por gênero"**;
 - A propriedade `value` do select recebe o valor da prop `selectedGenre`;
@@ -61,7 +61,7 @@ Dentro desse formulário há campos usados na filtragem de cartões.
    - `Comédia`, com o valor `comedy`;
    - `Suspense`, com o valor `thriller`.
 
-### 6 - Criar um componente chamado `<AddMovie />`
+### 6 - Criar um componente chamado `<AddMovie />` ✔️
 
 Esse componente renderiza um formulário que permite adicionar na biblioteca um novo cartão de filme, dadas as seguintes informações do novo filme:
   - subtítulo
@@ -92,41 +92,41 @@ O estado inicial do componente `<AddMovie />` deve ser:
   - `rating`: 0;
   - `genre`: 'action'.
 
-### 7 - Renderizar um formulário dentro de `<AddMovie />`
+### 7 - Renderizar um formulário dentro de `<AddMovie />` ✔️
 
 Dentro desse formulário há campos usados para preencher informações do novo cartão a ser adicionado na biblioteca.
 
-### 8 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o título do novo filme
+### 8 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o título do novo filme ✔️
 
 - O input tem uma label associada com o texto: **"Título"**;
 - O input tem seu valor inicial provido pelo estado inicial do componente, via `title`;
 - A propriedade `onChange` atualiza o estado de `<AddMovie />`, atribuindo a `title` o atual título contido no input.
 
-### 9 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o subtítulo do novo filme
+### 9 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o subtítulo do novo filme ✔️
 
 - O input tem uma label associada com o texto: **"Subtítulo"**;
 - O input tem seu valor inicial provido pelo estado inicial do componente, via `subtitle`;
 - A propriedade `onChange` atualiza o estado de `<AddMovie />`, atribuindo a `subtitle` o atual subtítulo contido no input.
 
-### 10 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o caminho da imagem do novo filme
+### 10 - Renderizar um input do tipo texto dentro do formulário em `<AddMovie />` para obter o caminho da imagem do novo filme ✔️
 
 - O input tem uma label associada com o texto: **"Imagem"**;
 - O input tem seu valor inicial provido pelo estado inicial do componente, via `imagePath`;
 - A propriedade `onChange` atualiza o estado de `<AddMovie />`, atribuindo a `imagePath` o atual caminho da imagem contido no input.
 
-### 11 - Renderizar uma `textarea` dentro do formulário em `<AddMovie />` para obter a sinopse do novo filme
+### 11 - Renderizar uma `textarea` dentro do formulário em `<AddMovie />` para obter a sinopse do novo filme ✔️
 
 - A `textarea` tem uma label associada com o texto: **"Sinopse"**;
 - A `textarea` tem seu valor inicial provido pelo estado inicial do componente, via `storyline`;
 - A propriedade `onChange` atualiza o estado de `<AddMovie />`, atribuindo a `storyline` a sinopse atual continda na `textarea`.
 
-### 12 - Renderizar um `input` do tipo `number` dentro do formulário em `<AddMovie />` para obter a avaliação do novo filme
+### 12 - Renderizar um `input` do tipo `number` dentro do formulário em `<AddMovie />` para obter a avaliação do novo filme ✔️
 
 - O `input` tem uma label associada com o texto: **"Avaliação"**;
 - O `input` tem seu valor inicial provido pelo estado inicial do componente, via `rating`;
 - A propriedade `onChange` atualiza o estado de `<AddMovie />`, atribuindo a `rating` a avaliação atual continda no input.
 
-### 13 - Renderizar um `select` do formulário em `<AddMovie />` para selecionar o gênero do novo filme
+### 13 - Renderizar um `select` do formulário em `<AddMovie />` para selecionar o gênero do novo filme ✔️
 
 - O `select` tem uma label associada com o texto: **"Gênero"**;
 - O `select` tem seu valor inicial provido pelo estado inicial do componente, via `genre`;
@@ -137,21 +137,21 @@ Dentro desse formulário há campos usados para preencher informações do novo 
    - `Comédia`, com o valor `comedy`;
    - `Suspense`, com o valor `thriller`.
 
-### 14 - Renderizar um botão do formulário em `<AddMovie />` para fazer uso dos dados do novo filme, contidos no estado de `<AddMovie />`
+### 14 - Renderizar um botão do formulário em `<AddMovie />` para fazer uso dos dados do novo filme, contidos no estado de `<AddMovie />` ✔️
 
 - O botão tem escrito o seguinte texto: **"Adicionar filme"**;
 - A propriedade `onClick` do botão invoca uma função, em `<AddMovie />`, que:
   - Executa a callback passada para o componente `<AddMovie />` via props, chamada `onClick`, que recebe como parâmetro o estado atual de `<AddMovie />`;
   - Reseta o estado de `<AddMovie />`, voltando para o inicial, conforme mencionado anteriormente.
 
-### 15 - Criar um componente chamado `<MovieLibrary />`
+### 15 - Criar um componente chamado `<MovieLibrary />` ✔️
 
 Esse componente renderiza a biblioteca de filmes que renderizará a `searchBar` e o `addMovies` para filtrar por filmes e adicionar um filme à biblioteca respectivamente.
 
 `<MovieLibrary />` recebe como props:
   - `movies`, um array
 
-### 16 - Configurar o estado inicial do componente `MovieLibray`
+### 16 - Configurar o estado inicial do componente `MovieLibray` ✔️
 
 O componente `<MovieLibrary />` possui como estado as seguintes propriedades:
   - `searchText`: guarda o texto de busca por filmes;
@@ -161,7 +161,7 @@ O componente `<MovieLibrary />` possui como estado as seguintes propriedades:
 
 O estado de `<MovieLibrary />` contém a lista de filmes e os filtros a serem aplicados sobre a listagem.
 
-### 17 - Renderizar `<SearchBar />` dentro de `<MovieLibrary />`
+### 17 - Renderizar `<SearchBar />` dentro de `<MovieLibrary />` ✔️
 
 - `searchText` oriundo do estado de `<MovieLibrary />` é passado para a prop `searchText` de `<SearchBar />`;
 - A callback para atualizar o estado de `<MovieLibrary />` em `searchText` precisa ser passada para `<SearchBar />`;
@@ -170,7 +170,7 @@ O estado de `<MovieLibrary />` contém a lista de filmes e os filtros a serem ap
 - `selectedGenre` oriundo do estado de `<MovieLibrary />` deve ser passado para a prop `selectedGenre` de `<SearchBar />`;
 - A callback para atualizar o estado de `<MovieLibrary />` em `selectedGenre` precisa ser passada para `<SearchBar />`.
 
-### 18 - Renderizar `<MovieList />` dentro de `<MovieLibrary />`
+### 18 - Renderizar `<MovieList />` dentro de `<MovieLibrary />` ✔️
 
 - Deve passar para a prop `movies` de `<MovieList />` todos os filmes filtrados;
 - Quando o estado para `bookmarkedOnly` é falso, não é alterada a listagem de filmes a ser renderizada;
@@ -183,11 +183,11 @@ O estado de `<MovieLibrary />` contém a lista de filmes e os filtros a serem ap
   - Filmes cujo subtítulo contém o que está presente em `searchText`, **ou**;
   - Filmes cuja sinopse contém o que está presente em` searchText`.
 
-### 19 - Renderizar `<AddMovie />` dentro de `<MovieLibrary />`
+### 19 - Renderizar `<AddMovie />` dentro de `<MovieLibrary />` ✔️
 
 - A callback que permite adicionar um novo filme ao final da lista precisa ser passada para `<AddMovie />`.
 
-### 20 - Adicionar proptypes a todos os componentes
+### 20 - Adicionar proptypes a todos os componentes ✔️
 
 Todos os componentes que recebem props devem ter suas proptypes corretamente declaradas. 
 
