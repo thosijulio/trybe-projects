@@ -78,10 +78,11 @@ Neste projeto, foi desenvolvido uma carteira de controle de gastos com conversor
  - Após adicionar a despesa, atualizar a soma total das despesas. Essa informação deve ficar no header.
 
    * As despesas salvas no Redux ficarão com um formato semelhante ao seguinte:
-```
       <details>
       <summary>Clique para expandir.</summary>
       <p>
+
+        ```javascript
           expenses: [{
             "id": 0,
             "value": "3",
@@ -176,9 +177,33 @@ Neste projeto, foi desenvolvido uma carteira de controle de gastos com conversor
               }
             }
           }]
+        ```
+
         </p>
       </details>
-     ```
+
+### 9. Desenvolver uma tabela com os gastos contendo as seguintes características: ✔️
+
+ - A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido, Moeda de conversão e Editar/Excluir.
+ - Utilizar os elementos corretos para o cabeçalho, para as linhas e para as células.
+ - A tabela deve ser alimentada pelo estado da aplicação, que estará disponível na chave ***expenses*** que vem do reducer `wallet`.
+ - O campo de Moeda e Moeda de Conversão deverão conter o nome da moeda.
+ - O campo 'Moeda de conversão' exibirá 'Real'.
+ - Utilizar o formato `0.00` (número - ponto - duas casas decimais).
+
+### 10. Criar um botão para deletar uma despesa da tabela contendo as seguintes características: ✔️
+
+ - O botão deve estar na linha da tabela.
+ - Ao ser clicado, o botão deleta a linha da tabela, alterando o estado global.
+
+## Requisitos Bônus
+
+### 11. Criar um botão para editar uma despesa da tabela contendo as seguintes características:
+
+ - O botão deve estar dentro da linha da tabela.
+ - Ao ser clicado, o botão habilita um formulário para editar a linha da tabela. Ao clicar em "Editar despesa" ela é atualizada, alterando o estado global.
+   * O botão para submeter a despesa para edição deverá conter o texto "Editar despesa"
+   * O câmbio utilizado na edição deve ser o mesmo do cálculo feito na adição do gasto.
 
 ---
 
