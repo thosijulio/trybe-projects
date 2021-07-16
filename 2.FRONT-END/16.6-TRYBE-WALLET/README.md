@@ -198,7 +198,7 @@ Neste projeto, foi desenvolvido uma carteira de controle de gastos com conversor
 
 ## Requisitos Bônus
 
-### 11. Criar um botão para editar uma despesa da tabela contendo as seguintes características:
+### 11. Criar um botão para editar uma despesa da tabela contendo as seguintes características: ✔️
 
  - O botão deve estar dentro da linha da tabela.
  - Ao ser clicado, o botão habilita um formulário para editar a linha da tabela. Ao clicar em "Editar despesa" ela é atualizada, alterando o estado global.
