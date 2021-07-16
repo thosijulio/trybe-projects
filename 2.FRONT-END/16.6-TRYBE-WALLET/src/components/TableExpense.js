@@ -5,7 +5,7 @@ import deleteExpenseAction from '../actions/deleteExpenseAction';
 
 class TableExpense extends React.Component {
   renderExpenses() {
-    const { expenses, deleteExpense } = this.props;
+    const { expenses, deleteExpense, changeForm } = this.props;
     return (
       <tbody>
         { expenses.map((expense, key) => (
@@ -37,6 +37,13 @@ class TableExpense extends React.Component {
                 onClick={ () => deleteExpense(expense) }
               >
                 Excluir
+              </button>
+              <button
+                type="button"
+                data-testid="edit-btn"
+                onClick={ () => changeForm('edit', key) }
+              >
+                Editar
               </button>
             </td>
           </tr>
@@ -88,6 +95,7 @@ TableExpense.propTypes = {
     tag: PropTypes.string.isRequired,
   })).isRequired,
   deleteExpense: PropTypes.func.isRequired,
+  changeForm: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableExpense);

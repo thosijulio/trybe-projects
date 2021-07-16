@@ -5,8 +5,18 @@ import Form from '../components/Form';
 import TableExpense from '../components/TableExpense';
 
 class Wallet extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      typeForm: 'add',
+      expenseID: 0,
+    };
+    this.changeForm = this.changeForm.bind(this);
+  }
+
   totalExpense() {
     const { expenses } = this.props;
+    if (!expenses) return 0;
     return expenses.reduce((acc, expense) => {
       const expenseValue = expense
         .exchangeRates[expense.currency]
@@ -17,8 +27,13 @@ class Wallet extends React.Component {
     }, 0);
   }
 
+  changeForm(typeForm, expenseID) {
+    this.setState({ typeForm, expenseID });
+  }
+
   render() {
     const { emailLogin } = this.props;
+    const { typeForm, expenseID } = this.state;
     return (
       <>
         <header>
@@ -28,8 +43,12 @@ class Wallet extends React.Component {
           </p>
           <p data-testid="header-currency-field">BRL</p>
         </header>
-        <Form />
-        <TableExpense />
+        <Form
+          typeForm={ typeForm }
+          expenseID={ expenseID }
+          changeState={ this.changeForm }
+        />
+        <TableExpense changeForm={ this.changeForm } />
       </>
     );
   }
