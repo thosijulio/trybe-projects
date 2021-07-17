@@ -41,44 +41,50 @@ class Form extends React.Component {
     const tagOptions = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     const methodOptions = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
     return (
-      <form>
-        <label htmlFor="value">
-          Valor
-          <input id="value" value={ value } data-testid="value-input" onChange={ this.handleForm } />
+      <form className="is-flex-direction-row" style={{backgroundColor:'rgb(190, 190, 196)'}}>
+        <label htmlFor="value" className="label">
+          Valor:
+          <input id="value" className="input" value={ value } data-testid="value-input" onChange={ this.handleForm }/>
         </label>
-        <label htmlFor="description">
-          Descrição
-          <input id="description" data-testid="description-input" value={ description } onChange={ this.handleForm } />
+        <label htmlFor="description" className="label">
+          Descrição:
+          <input id="description" className="input" data-testid="description-input" value={ description } onChange={ this.handleForm } />
         </label>
-        <label htmlFor="currency">
-          Moeda
-          <select id="currency" value={ currency } data-testid="currency-input" onChange={ this.handleForm }>
-            { currenciesOptions.map((currencyAPI, key) => (
-              <option key={ key }>{ currencyAPI }</option>
-            ))}
-          </select>
+        <label htmlFor="currency" className="label" style={{width:'100px'}}>
+          Moeda:
+          <div className="select">
+            <select id="currency" value={ currency } data-testid="currency-input" onChange={ this.handleForm }>
+              { currenciesOptions.map((currencyAPI, key) => (
+                <option key={ key }>{ currencyAPI }</option>
+              ))}
+            </select>
+          </div>
+        </label >
+        <label htmlFor="method" data-testid="method-input" className="label" style={{width:'183px'}}>
+          Método de pagamento:
+          <div className="select">
+            <select id="method" value={ method } onChange={ this.handleForm }>
+              { methodOptions.map((methods, i) => <option key={ i }>{methods}</option>)}
+            </select>
+          </div>
         </label>
-        <label htmlFor="method" data-testid="method-input">
-          Método de pagamento
-          <select id="method" value={ method } onChange={ this.handleForm }>
-            { methodOptions.map((methods, i) => <option key={ i }>{methods}</option>)}
-          </select>
-        </label>
-        <label htmlFor="tag" data-testid="tag-input">
-          Tag
-          <select id="tag" value={ tag } onChange={ this.handleForm }>
-            {tagOptions.map((option, index) => (
-              <option key={ index }>{option}</option>
-            ))}
-          </select>
+        <label htmlFor="tag" data-testid="tag-input" className="label" style={{width:'150px'}}>
+          Tag:
+          <div className="select">
+            <select id="tag" value={ tag } onChange={ this.handleForm }>
+              {tagOptions.map((option, index) => (
+                <option key={ index }>{option}</option>
+              ))}
+            </select>
+          </div>
         </label>
         { typeForm === 'edit'
           ? (
-            <button type="button" onClick={ () => { editForm(form, expenseID); changeState('add', 0); } }>
+            <button className={`button is-primary is-rounded`} type="button" onClick={ () => { editForm(form, expenseID); changeState('add', 0); } } style={{margin: '15px 0 0'}}>
               Editar despesa
             </button>)
           : (
-            <button type="button" onClick={ () => sendForm(form) }>
+            <button className={`button is-link is-rounded`} type="button" onClick={ () => sendForm(form) } style={{margin: '15px 0 0'}}>
               Adicionar despesa
             </button>) }
       </form>

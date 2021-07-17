@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import saveEmailAction from '../actions/saveEmailAction';
+import './login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -55,19 +56,21 @@ class Login extends React.Component {
     const { sendEmail } = this.props;
 
     return (
-      <form>
-        <label htmlFor="email">
+      <form className={`form`} style={{margin: '200px 0 0 0', backgroundColor:'lightGrey'}}>
+        <label htmlFor="email" className={`label`}>
           Login:
           <input
+            className="input"
             data-testid="email-input"
             id="email"
             type="email"
             onChange={ this.checkFormValidation }
           />
         </label>
-        <label htmlFor="password">
-          Senha
+        <label htmlFor="password" className="label">
+          Senha:
           <input
+            className="input"
             data-testid="password-input"
             id="password"
             type="password"
@@ -77,6 +80,7 @@ class Login extends React.Component {
         <Link to="/carteira">
           <button
             type="button"
+            className={`button is-rounded is-link`}
             id="sendButton"
             onClick={ () => sendEmail(email) }
           >

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Form from '../components/Form';
 import TableExpense from '../components/TableExpense';
+import './wallet.css';
 
 class Wallet extends React.Component {
   constructor() {
@@ -37,11 +38,13 @@ class Wallet extends React.Component {
     return (
       <>
         <header>
-          <p data-testid="email-field">{ `Email: ${emailLogin}` }</p>
-          <p data-testid="total-field">
-            { `Despesa Total: R$${this.totalExpense().toFixed(2)} `}
-          </p>
-          <p data-testid="header-currency-field">BRL</p>
+            <p data-testid="email-field">{ `Email: ${emailLogin}` }</p>
+            <div>
+              <span data-testid="total-field">
+                { `Despesa Total: R$${this.totalExpense().toFixed(2)} `}
+              </span>
+              <span data-testid="header-currency-field">BRL</span>
+          </div>
         </header>
         <Form
           typeForm={ typeForm }
