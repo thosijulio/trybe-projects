@@ -39,4 +39,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _Bloco 14 - FrontEnd Online Store (Projeto em Grupo)_
 - [X] _[Bloco 15 - Testes em React](2.FRONT-END/15.4-REACT-TESTING-LIBRARY)_
 - [ ] _[Bloco 16 - Trybe Wallet](2.FRONT-END/16.6-TRYBE-WALLET)_
+- [ ] _[Bloco 17 - Star Wars Datatable](2.FRONT-END/17.4-STARWARS-DATATABLE)_
 # [...]
