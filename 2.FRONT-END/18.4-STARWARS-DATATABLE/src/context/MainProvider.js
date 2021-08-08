@@ -4,17 +4,30 @@ import starWarsAPI from '../services/starWarsAPI';
 import MainContext from './MainContext';
 
 function MainProvider({ children }) {
-  const [value, setValue] = useState({ data: [] });
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [filters, setFilters] = useState({
+    filterByName: {},
+  });
 
   useEffect(() => {
     const getPlanets = async () => {
-      setValue({ data: await starWarsAPI() });
+      setData(await starWarsAPI());
+      setFilteredData(await starWarsAPI());
     };
     getPlanets();
   }, []);
 
   return (
-    <MainContext.Provider value={ value }>
+    <MainContext.Provider
+      value={ {
+        data,
+        filters,
+        setFilters,
+        filteredData,
+        setFilteredData,
+      } }
+    >
       { children }
     </MainContext.Provider>
   );
