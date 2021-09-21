@@ -32,12 +32,18 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[Bloco 9 - Shopping Cart](1.INTRODUCAO/9.3-SHOPPING-CART)_
 - [X] _[Bloco 10 - Jest Assíncrono e Mocking](1.INTRODUCAO/10.4-JEST)_
 
-## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
+## Desenvolvimento Front-End :hourglass_flowing_sand:
 - [X] _[Bloco 11 - Movie Cards Library](2.FRONT-END/11.3-MOVIE-CARDS-LIBRARY)_
 - [X] _[Bloco 12 - Movie Cards Library Stateful](2.FRONT-END/12.3-MOVIE-CARDS-LIBRARY-STATEFUL)_
 - [X] _[Bloco 13 - Movie Cards Library CRUD](2.FRONT-END/13.3-MOVIE-CARD-LIBRARY-CRUD)_
 - [X] _Bloco 14 - FrontEnd Online Store (Projeto em Grupo)_
 - [X] _[Bloco 15 - Testes em React](2.FRONT-END/15.4-REACT-TESTING-LIBRARY)_
-- [ ] _[Bloco 16 - Trybe Wallet](2.FRONT-END/16.6-TRYBE-WALLET)_
-- [ ] _[Bloco 17 - Star Wars Datatable](2.FRONT-END/17.4-STARWARS-DATATABLE)_
+- [X] _[Bloco 16 - Trybe Wallet](2.FRONT-END/16.6-TRYBE-WALLET)_
+- [X] _Bloco 17 - Jogo de Trívia (Projeto em Grupo)_
+- [ ] _[Bloco 18 - Star Wars Datatable](2.FRONT-END/17.4-STARWARS-DATATABLE)_
+- [X] _Bloco 19 - App de Receitas (Projeto em Grupo)_
+
+## Desenvolvimento Back-End
+- [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)✔
+
 # [...]
