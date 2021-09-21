@@ -43,7 +43,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] _[Bloco 18 - Star Wars Datatable](2.FRONT-END/17.4-STARWARS-DATATABLE)_
 - [X] _Bloco 19 - App de Receitas (Projeto em Grupo)_
 
-## Desenvolvimento Back-End
-- [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)✔
+## Desenvolvimento Back-End :hourglass_flowing_sand:
+- [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)
 
 # [...]
