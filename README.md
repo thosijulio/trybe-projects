@@ -44,6 +44,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _Bloco 19 - App de Receitas (Projeto em Grupo)_
 
 ## Desenvolvimento Back-End :hourglass_flowing_sand:
-- [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)
+- [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)_
 
 # [...]
