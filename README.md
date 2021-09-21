@@ -40,7 +40,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] _[Bloco 15 - Testes em React](2.FRONT-END/15.4-REACT-TESTING-LIBRARY)_
 - [X] _[Bloco 16 - Trybe Wallet](2.FRONT-END/16.6-TRYBE-WALLET)_
 - [X] _Bloco 17 - Jogo de Trívia (Projeto em Grupo)_
-- [ ] _[Bloco 18 - Star Wars Datatable](2.FRONT-END/17.4-STARWARS-DATATABLE)_
+- [ ] _[Bloco 18 - Star Wars Datatable](2.FRONT-END/18.4-STARWARS-DATATABLE)_
 - [X] _Bloco 19 - App de Receitas (Projeto em Grupo)_
 
 ## Desenvolvimento Back-End :hourglass_flowing_sand:
