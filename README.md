@@ -46,5 +46,5 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 ## Desenvolvimento Back-End :hourglass_flowing_sand:
 - [X] _[Bloco 20 - All For One (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)_
 - [X] _[Bloco 21 - Vocabulary Booster (MySQL)](3.BACK-END/20.5-MYSQL-ALL-FOR-ONE)_
-
+- [X] _[Bloco 22 - One For All (MySQL)](3.BACK-END/22.4-MYSQL-ONE-FOR-ALL)_
 # [...]
