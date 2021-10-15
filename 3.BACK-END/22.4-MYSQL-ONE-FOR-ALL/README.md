@@ -35,9 +35,59 @@ Regras de negócio solicitadas:
 
 ### 3. Criar uma VIEW `historico_reproducao_usuarios` que exiba duas colunas: ✔️
   - Nome da pessoa usuária. Alias = "usuario";
-  - Nome da canção ouvida pela pessoa com base no seu histórico de reprodução.. Alias = 
+  - Nome da canção ouvida pela pessoa com base no seu histórico de reprodução.
 
 Ordenar por nome da pessoa usuária em ordem alfabética e pelo nome da canção em ordem alfabética.
+
+### 4. Criar uma VIEW `top_3_artistas` que exiba as três pessoas artistas mais populares, com duas colunas: ✔️
+
+  - Nome da pessoa artista. Alias = "artista";
+  - Quantidade de pessoas que estão seguindo aquela pessoa artista. Alias = "seguidores".
+
+Ordenar por quantidade de seguidores em ordem decrescente. Em caso de empate, ordenar pelo nome da pessoa artista em ordem alfabética.
+
+### 5. Criar uma VIEW `top_2_hits_do_momento` que exiba duas colunas: ✔️
+
+  - Nome da canção. Alias = "cancao";
+  - Quantidade de pessoas que já escutaram a canção. Alias = "reproducoes".
+
+Ordenar po número de reproduções em ordem decrescente. Em caso de empate, ordenar pelo nome da canção em ordem alfabética.
+
+### 6. Criar uma VIEW `faturamento_atual` que exiba quatro colunas: ✔️
+
+  - Menor valor de plano existente para uma pessoa usuária. Alias = "faturamento_minimo";
+  - Maior valor de plano existente para uma pessoa usuária. Alias = "faturamento_maximo";
+  - Valor médio dos planos possuídos por pessoas usuárias. Alias = "faturamento_medio";
+  - Valor total obtido com os planos possuídos por pessuas usuárias. Alias = "faturamento_total".
+
+Arredondas os valores para duas casas decimais.
+
+### 7. Criar uma VIEW `perfil_artistas` que exiba três colunas: ✔️
+
+  - Nome da pessoa artista. Alias = "artista";
+  - Nome do álbum. Alias = "album";
+  - Quantidade de pessoas seguidoras que aquela pessoa artista possui. Alias = "seguidores".
+
+Ordenados por número de pessoas seguidoras em ordem decrescente. Em caso de empate, ordenar pelo nome da pessoa artista em ordem alfabética. Em caso de empate, ordenar os resultados pelo nome do álbum alfabeticamente.
+
+### 8. Criar uma TRIGGER `trigger_usuario_delete` que: ✔️
+  - É disparada sempre que uma pessoa usuária for excluída do banco de dados, refletindo essa exclusão em todas as tabelas que ela estiver.
+
+### 9. Criar uma PROCEDURE `albuns_do_artista` que: ✔️
+  - Receba como parâmetro o nome de uma pessoa artista e em retorno deve exibir duas colunas:
+    - Nome da pessoa artista. Alias = "artista";
+    - Nome do álbum. Alias = "album".
+
+Ordenar pelo nome do álbum em ordem alfabética.
+
+### 10. Criar uma FUNCTION `quantidade_musicas_no_historico` que: ✔️
+  - Receba um código identificador de pessoa e exiba:
+    - Quantidade de músicas presentes no histórico de reprodução dessa pessoa procurada.
+
+### 11. Criar uma VIEW `cancoes_premium` que exiba: ✔️
+  - O nome e a quantidade de vezes que cada canção foi tocada por pessoas usuárias do plano familiar ou universitário.
+
+Agrupar pelo nome da canção e ordenar em ordem alfabética.
 
 ---
 
