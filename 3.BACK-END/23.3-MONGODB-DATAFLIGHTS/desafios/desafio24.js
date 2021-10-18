@@ -6,4 +6,5 @@ db.voos.findOne({ $and: [
     { "empresa.nome": "AZUL" },
   ] },
 ],
-});
+},
+{ vooId: true, "empresa.nome": true, litrosCombustivel: true, _id: false });
