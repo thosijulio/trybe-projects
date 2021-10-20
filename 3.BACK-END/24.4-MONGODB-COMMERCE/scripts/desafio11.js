@@ -3,12 +3,12 @@ db.produtos.updateMany(
   {
     $push: {
       tags: {
-        $each: ['tasty', 'combo'],
+        $each: ["tasty", "combo"],
         $sort: 1,
       },
     },
   },
-)
+);
 
 db.produtos.find(
   {},
