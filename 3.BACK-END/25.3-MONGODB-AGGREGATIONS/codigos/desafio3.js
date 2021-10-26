@@ -4,7 +4,7 @@ db.movies.aggregate([
       "imdb.rating": {
         $gte: 7,
       },
-      genre: {
+      genres: {
         $nin: [
           "Crime",
           "Horror",
