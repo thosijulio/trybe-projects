@@ -23,7 +23,7 @@ db.trips.aggregate([
               {
                 $subtract: [
                   "$stopTime",
-                  "$startTime"
+                  "$startTime",
                 ],
               },
               3600000,

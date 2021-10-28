@@ -8,7 +8,7 @@ db.trips.aggregate([
             {
               $subtract: [
                 "$stopTime",
-                "$startTime"
+                "$startTime",
               ],
             },
             3600000,
@@ -31,7 +31,7 @@ db.trips.aggregate([
   },
   {
     $sort: {
-      duracaoMedia: 1
+      duracaoMedia: 1,
     },
   },
 ]);

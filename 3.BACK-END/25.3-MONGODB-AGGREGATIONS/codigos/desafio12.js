@@ -12,8 +12,8 @@ db.trips.aggregate([
         nomeEstacao: "$startStationName",
       },
       total: {
-          $sum: 1,
-        },
+        $sum: 1,
+      },
     },
   },
   {
