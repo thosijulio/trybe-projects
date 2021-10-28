@@ -8,9 +8,7 @@ db.trips.aggregate([
   },
   {
     $group: {
-      _id: {
-        nomeEstacao: "$startStationName",
-      },
+      _id: "$startStationName",
       total: {
         $sum: 1,
       },
@@ -23,5 +21,12 @@ db.trips.aggregate([
   },
   {
     $limit: 1,
+  },
+  {
+    $project: {
+      _id: false,
+      nomeEstacao: "$_id",
+      total: "$total",
+    },
   },
 ]);
