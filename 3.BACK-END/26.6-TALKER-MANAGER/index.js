@@ -43,7 +43,7 @@ app.post(
   
   // conteúdo realizado após a leitura do site: https://www.horadecodar.com.br/2020/09/13/como-validar-email-com-javascript/
 
-  if (/\S+@\S+\.\S+/.test(email)) {
+  if (!/\S+@\S+\.\S+/.test(email)) {
     return res.status(400).json({
       message: 'O "email" deve ter o formato "email@email.com"',
     });
@@ -55,18 +55,19 @@ app.post(
   const { password } = req.body;
 
   if (!password || password === '') {
-    return res.status(400).json({ message: 'O campo "email" é obrigatório' });
+    return res.status(400).json({ message: 'O campo "password" é obrigatório' });
   }
 
-  if (password.length < 6) {
+  if (JSON.stringify(password).length < 6) {
     return res.status(400).json({ message: 'O "password" deve ter pelo menos 6 caracteres' });
   }
   next();
 },
   async (req, res) => {
     const token = generateToken();
+    console.log(token);
     try {
-      await fs.writeFile('./authentication/token.json', token);
+      await fs.writeFile('./authentication.json', JSON.stringify(token), { flag: 'wx' });
       return res.status(200).json({ token });
     } catch (err) {
       return res.status(400).json({ message: 'Falha ao criar token' });
