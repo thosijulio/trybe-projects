@@ -3,6 +3,7 @@ const findProduct = require('../../services/product/find');
 const findById = async (req, res, next) => {
   const { id } = req.params;
   const result = await findProduct(id);
+  console.log(result);
 
   if (!result) {
     return next({
