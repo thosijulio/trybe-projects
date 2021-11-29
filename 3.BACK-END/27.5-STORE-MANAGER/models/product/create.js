@@ -1,9 +1,8 @@
 const connection = require('../connection');
 
 const create = async (product) => {
-  const { result: ops } = await (await connection).collection('products').insertOne(product);
-  console.log(result.ops);
-  return result;
+  const result = await (await connection).collection('product').insertOne(product);
+  return result.ops;
 };
 
 module.exports = create;
