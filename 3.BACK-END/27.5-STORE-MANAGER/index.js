@@ -6,17 +6,19 @@ const PORT = 3000;
 
 app.use('/', express.json());
 
-app.use('/', mainRouter);
-
 // não remova esse endpoint, e para o avaliador funcionar
 app.get('/', (_request, response) => {
   response.send();
 });
 
+app.use('/', mainRouter);
+
 app.use('/', (err, _req, res, _next) => {
   res.status(err.status).json({
-    code: err.code,
-    message: err.message,
+    err: {
+      code: err.code,
+      message: err.message,
+    },
   });
 });
 

@@ -2,7 +2,7 @@ const model = require('../../models/index');
 
 const create = async (product) => {
   const { name } = product;
-  const productExist = await model.product.find(name);
+  const productExist = await model.product.findByName(name);
   if (productExist) {
     return null;
   }
