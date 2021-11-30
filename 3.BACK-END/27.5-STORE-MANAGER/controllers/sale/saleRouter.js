@@ -4,11 +4,13 @@ const verifySaleId = require('../../middlewares/verifySaleId');
 const create = require('./create');
 const find = require('./find');
 const findById = require('./findById');
+const update = require('./update');
 
 const router = express.Router({ mergeParams: true });
 
 router.post('/', verifySaleQuantity, create);
 router.get('/:id', verifySaleId, findById);
 router.get('/', find);
+router.put('/:id', verifySaleQuantity, update);
 
 module.exports = router;
