@@ -8,6 +8,7 @@ const create = async (sales) => {
   }
 
   const products = await Promise.all(productsPromises);
+<<<<<<< HEAD
   if (!sales.some((sale, index) => sale.quantity >= products[index].quantity)) {
     sales.forEach((sale, index) => {
       model.product.update(
@@ -22,6 +23,12 @@ const create = async (sales) => {
   }
 
   return null;
+=======
+
+  return !sales.some((sale, index) => sale.quantity >= products[index].quantity)
+    ? model.sale.create(sales)
+    : null;
+>>>>>>> 47e89b9cb5faa20be499748b1489e464a1658a60
 };
 
 module.exports = create;
