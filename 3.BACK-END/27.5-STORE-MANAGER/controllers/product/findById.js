@@ -1,8 +1,8 @@
-const findProduct = require('../../services/product/find');
+const service = require('../../services');
 
 const findById = async (req, res, next) => {
   const { id } = req.params;
-  const result = await findProduct(id);
+  const result = await service.product.find(id);
 
   if (!result) {
     return next({

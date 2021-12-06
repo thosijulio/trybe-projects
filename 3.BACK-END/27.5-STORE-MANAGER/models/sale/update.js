@@ -2,7 +2,7 @@ const { ObjectId } = require('mongodb');
 const connection = require('../connection');
 
 const update = async (id, sale) => {
-  const { value } = await (await connection).collection('sales').findOneAndUpdate(
+  const { value } = await (await connection()).collection('sales').findOneAndUpdate(
     {
       _id: ObjectId(id),
     },

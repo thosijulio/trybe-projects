@@ -1,6 +1,6 @@
 const service = require('../../services');
 
-const update = async (req, res, _next) => {
+const update = async (req, res) => {
   const { id } = req.params;
   const sale = req.body;
   const updatedSale = await service.sale.update(id, sale);
