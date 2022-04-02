@@ -20,7 +20,11 @@ def fetch(url):
 
 # Requisito 2
 def scrape_novidades(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(html_content)
+    href = selector.css("body .tec--container .tec--main .z--container " +
+                        ".z--row .z--w-2-3 .tec--list " +
+                        "div article div h3 a::attr(href)").getall()
+    return href
 
 
 # Requisito 3
