@@ -1,5 +1,13 @@
+from datetime import datetime
 from tech_news.database import db
 import re
+
+
+def generic_news_search_return(key, value):
+    return [
+        (news["title"], news["url"])
+        for news in db.news.find({key: {"$regex": value, "$options": "i"}})
+    ]
 
 
 # Requisito 6
@@ -19,12 +27,17 @@ def search_by_title(title):
 
 # Requisito 7
 def search_by_date(date):
-    """Seu código deve vir aqui"""
+    try:
+        datetime.strptime(date, "%Y-%m-%d")
+    except ValueError:
+        raise ValueError("Data inválida")
+    else:
+        return generic_news_search_return("timestamp", date)
 
 
 # Requisito 8
 def search_by_source(source):
-    """Seu código deve vir aqui"""
+    return generic_news_search_return("sources", source)
 
 
 # Requisito 9
