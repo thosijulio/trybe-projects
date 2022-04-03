@@ -72,10 +72,7 @@ def scrape_noticia(html_content):
         ][0]
 
     comments_count = selector.css(
-        "body .tec--container .tec--main .z--container " +
-        ".tec--article__body-grid .tec--author > nav " +
-        "> div > button::attr(data-count)"
-    ).get()
+        "button#js-comments-btn::attr(data-count)").get()
 
     if comments_count is None:
         scraped_notice["comments_count"] = 0
@@ -100,19 +97,35 @@ def scrape_noticia(html_content):
 
     return scraped_notice
 
+# Apos o requisito 5 nao funcionar conforme esperado, pesquisei por um tempo e
+# decidi que a melhor opcao era refatorar a funcao, dividindo ela em duas
+# e utilizando o metodo de recursividade
+# OBS.: Encontrei essa funcao no codigo do aluno Guilherne Dias
+# https://github.com/tryber/sd-012-tech-news/blob/guilherme-dias-tech-news/tech_news/scraper.py
+
+
+def get_news_links_list(amount, url, list):
+    html_content = fetch(url)
+    list.extend(scrape_novidades(html_content))
+    next = scrape_next_page_link(html_content)
+
+    return(
+        list[:amount]
+        if len(list) >= amount
+        else get_news_links_list(amount, next, list)
+    )
+
 
 # Requisito 5
 def get_tech_news(amount):
     link_page = "https://www.tecmundo.com.br/novidades"
-    html_content = fetch(link_page)
+    noticies_urls = get_news_links_list(int(amount), link_page, [])
 
-    noticies = scrape_novidades(html_content)
+    noticies = []
 
-    while len(noticies < amount):
-        link_page = scrape_next_page_link(html_content)
-        html_content = fetch(link_page)
-        noticies.append(scrape_novidades(html_content))
+    for notice_url in noticies_urls:
+        noticies.append(scrape_noticia(fetch(notice_url)))
 
-    for notice_url in noticies:
-        notice = fetch(notice_url)
-        create_news(notice)
+    create_news(noticies)
+
+    return noticies
