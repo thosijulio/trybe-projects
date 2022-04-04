@@ -1,35 +1,47 @@
+import sys
 from tech_news.analyzer.search_engine import (
     search_by_category, search_by_date, search_by_source, search_by_title
 )
 from tech_news.analyzer.ratings import top_5_categories, top_5_news
 from tech_news.scraper import get_tech_news
 
+# Requisitos 12 e 13 foram refatorado para diminuir a complexidade
+# das funcoes criadas. Para isso, criei uma tupla com todas as
+# option, e para usa-la. Criei uma funcao que navega por ela.
+# Eu chamo ela na minha funcao principal, e caso de erro
+# ela trata como "Opcao invalida".
 
-def search_by_menu(option):
-    if option == 1:
-        search = input("Digite o título:")
-        return search_by_title(search)
-    elif option == 2:
-        search = input("Digite a data no formato aaaa-mm-dd:")
-        return search_by_date(search)
-    elif option == 3:
-        search = input("Digite a fonte:")
-        return search_by_source(search)
+OPTIONS_CONFIG = {
+    0: ("Digite quantas notícias serão buscadas: ",
+        lambda amount: get_tech_news(amount)),
+    1: ("Digite o título: ",
+        lambda title: search_by_title(title)),
+    2: ("Digite a data no formato aaaa-mm-dd: ",
+        lambda date: search_by_date(date)),
+    3: ("Digite a fonte: ",
+        lambda source: search_by_source(source)),
+    4: ("Digite a categoria: ",
+        lambda category: search_by_category(category)),
+    5: ("",
+        lambda: top_5_news()),
+    6: ("",
+        lambda: top_5_categories()),
+    7: ("", "Encerrando script\n"),
+}
+
+
+def selection_options(option):
+    if "Digite" in OPTIONS_CONFIG[option][0]:
+        value = input(OPTIONS_CONFIG[option][0])
+        print(OPTIONS_CONFIG[option][1](value))
+    elif option < 7:
+        print(OPTIONS_CONFIG[option][1]())
     else:
-        search = input("Digite a categoria:")
-        return search_by_category(search)
+        print(OPTIONS_CONFIG[option][1])
 
 
-def search_by_top_ratings(option):
-    if option == 5:
-        return top_5_news()
-    else:
-        return top_5_categories()
-
-
-# Requisito 12
-def analyzer_menu():
-    option = int(input(
+def get_option():
+    option = input(
         """Selecione uma das opções a seguir:
  0 - Popular o banco com notícias;
  1 - Buscar notícias por título;
@@ -39,12 +51,17 @@ def analyzer_menu():
  5 - Listar top 5 notícias;
  6 - Listar top 5 categorias;
  7 - Sair.\n"""
-    ))
-    if option == 0:
-        amount = input("Digite quantas notícias serão buscadas:")
-        get_tech_news(amount)
-        analyzer_menu()
-    elif 1 <= option <= 4:
-        return search_by_menu(option)
-    elif 5 <= option <= 6:
-        return search_by_top_ratings(option)
+    )
+
+    if option.isdigit():
+        if 0 <= int(option) <= 7:
+            return int(option)
+
+
+# Requisito 12
+def analyzer_menu():
+    try:
+        option = get_option()
+        selection_options(option)
+    except (KeyError, ValueError):
+        print("Opção inválida", file=sys.stderr)
